@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.107 (w)1999-2020 BSI
+[*] Sat Sep  2 07:11:56 2023
+[*]
+[dumpfile] "/Users/shalan/work/IPs/EF_PSRAM_CTRL_V2/verify/utb/EF_PSRAM_CTRL_ahbl_tb.vcd"
+[dumpfile_mtime] "Sat Sep  2 07:10:45 2023"
+[dumpfile_size] 75341
+[savefile] "/Users/shalan/work/IPs/EF_PSRAM_CTRL_V2/verify/utb/EF_PSRAM_CTRL_ahbl_tb.gtkw"
+[timestart] 0
+[size] 2259 968
+[pos] -1 -1
+*-22.151134 39275000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 193
+[signals_width] 98
+[sst_expanded] 1
+[sst_vpaned_height] 287
+@28
+EF_PSRAM_CTRL_V2_ahbl_tb.sck
+EF_PSRAM_CTRL_V2_ahbl_tb.ce_n
+@800023
+EF_PSRAM_CTRL_V2_ahbl_tb.dio[3:0]
+@29
+(2)EF_PSRAM_CTRL_V2_ahbl_tb.dio[3:0]
+(3)EF_PSRAM_CTRL_V2_ahbl_tb.dio[3:0]
+@1001201
+-group_end
+@22
+EF_PSRAM_CTRL_V2_ahbl_tb.dio[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
