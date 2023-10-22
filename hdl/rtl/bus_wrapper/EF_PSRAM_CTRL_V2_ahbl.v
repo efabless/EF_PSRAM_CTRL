@@ -84,8 +84,15 @@ module EF_PSRAM_CTRL_V2_ahbl (
     wire        start;
     wire        done;
 
-    always@ (posedge HCLK) begin
-        if(HREADY) begin
+    always@ (posedge HCLK or negedge HRESETn) begin
+        if (!HRESETn) begin
+	    last_HSEL       <= 0;
+	    last_HADDR      <= 0;
+	    last_HWRITE     <= 0;
+	    last_HTRANS     <= 0;
+	    last_HSIZE      <= 0;
+        end
+        else if(HTRANS[1] & HSEL) begin
             last_HSEL       <= HSEL;
             last_HADDR      <= HADDR;
             last_HWRITE     <= HWRITE;
@@ -185,7 +192,7 @@ module EF_PSRAM_CTRL_V2_ahbl (
     EF_PSRAM_CTRL_V2 MCTRL(
         .clk(HCLK), 
         .rst_n(HRESETn), 
-        .addr({HADDR[23:0]}), 
+        .addr({last_HADDR[23:0]}), 
         .data_i(HWDATA),
         .data_o(HRDATA),
         .size(size),
