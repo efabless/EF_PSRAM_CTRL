@@ -1,0 +1,37 @@
+{
+    "info": {
+        "name": "EF_PSRAM_CTRL",
+        "description": "A Controller for Quad I/O SPI PSRAM",
+        "repo": "github.com/efabless/EF_PSRAM_CTRL",
+        "owner": "Efabless Corp.",
+        "license": "Apache 2.0",
+        "author": "Mohamed Shalan",
+        "email": "mshalan@efabless.com",
+        "version": "v1.0.0",
+        "date": "4-01-2023",
+        "category": "digital",
+        "tags": [
+            "memory",
+            "psram"
+        ],
+        "bus": [
+            "AHBL",
+            "WB"
+        ],
+        "type": "soft",
+        "status": "verified",
+        "cell_count": "530",
+        "width": "0.0",
+        "height": "0.0",
+        "technology": "n/a",
+        "clock_freq_mhz": "40",
+        "supply_voltage": [
+            "n/a"
+        ]
+    },
+    "clock": "HCLK",
+    "reset": {
+        "name": "HRESETn",
+        "pol": "0"
+    }
+}
