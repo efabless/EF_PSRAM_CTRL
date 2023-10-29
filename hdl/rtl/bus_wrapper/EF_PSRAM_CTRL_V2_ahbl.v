@@ -92,7 +92,7 @@ module EF_PSRAM_CTRL_V2_ahbl (
 	    last_HTRANS     <= 0;
 	    last_HSIZE      <= 0;
         end
-        else if(HTRANS[1] & HSEL) begin
+        else if(HREADY) begin
             last_HSEL       <= HSEL;
             last_HADDR      <= HADDR;
             last_HWRITE     <= HWRITE;
@@ -192,7 +192,7 @@ module EF_PSRAM_CTRL_V2_ahbl (
     EF_PSRAM_CTRL_V2 MCTRL(
         .clk(HCLK), 
         .rst_n(HRESETn), 
-        .addr({last_HADDR[23:0]}), 
+	.addr({last_HADDR[19:0]}), 
         .data_i(HWDATA),
         .data_o(HRDATA),
         .size(size),
