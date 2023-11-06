@@ -70,7 +70,7 @@ module EF_PSRAM_CTRL_V2 (
         endcase 
 
     always @ (posedge clk or negedge rst_n)
-        if(!rst_n) state = IDLE;
+        if(!rst_n) state <= IDLE;
         else state <= nstate;
 
     // Drive the Serial Clock (sck) @ clk/2 

@@ -192,7 +192,7 @@ module EF_PSRAM_CTRL_V2_ahbl (
     EF_PSRAM_CTRL_V2 MCTRL(
         .clk(HCLK), 
         .rst_n(HRESETn), 
-	.addr({last_HADDR[19:0]}), 
+	    .addr({last_HADDR[19:0]}), 
         .data_i(HWDATA),
         .data_o(HRDATA),
         .size(size),
