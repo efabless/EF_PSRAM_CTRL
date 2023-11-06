@@ -189,10 +189,12 @@ module EF_PSRAM_CTRL_V2_ahbl (
                         WR_CMD_REG; 
     
     wire    short_cmd   =   (ENTER_QPI_REG|EXIT_QPI_REG);
+    wire [23:0] mctrl_addr = {1'b0,last_HADDR[22:0]};
+
     EF_PSRAM_CTRL_V2 MCTRL(
         .clk(HCLK), 
         .rst_n(HRESETn), 
-	    .addr({last_HADDR[19:0]}), 
+	    .addr(mctrl_addr), 
         .data_i(HWDATA),
         .data_o(HRDATA),
         .size(size),
