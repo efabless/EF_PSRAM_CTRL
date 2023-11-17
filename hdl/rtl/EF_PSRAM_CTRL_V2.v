@@ -189,7 +189,7 @@ module EF_PSRAM_CTRL_V2 (
                             (rd_wr)                                     ?   4'b0000 :
                             4'b1111;
     assign douten_qpi   =   (counter < 2)                               ?   4'b1111 :
-                            (counter < 8)                              ?   4'b1111 :
+                            (counter < 8)                               ?   4'b1111 :
                             ((counter < data_start) & has_wait_states)  ?   4'b0000 :
                             (rd_wr)                                     ?   4'b0000 :
                             4'b1111;
