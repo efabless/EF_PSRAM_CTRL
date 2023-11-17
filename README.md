@@ -20,7 +20,7 @@ The controller was verified against the Verilog model of Microchip M23LC1024 for
 |Region|Description|
 |------|-----------|
 |```0x07FF_FFFF - 0x0000_0000```| Data Access |
-|```0x0FFF_FFFF - 0x0800_0000```| COnfiguration Registers|
+|```0x0FFF_FFFF - 0x0800_0000```| Configuration Registers|
 ## Configuration Registers
 | Address | Description |
 |---------|-------------|
@@ -36,14 +36,14 @@ The controller was verified against the Verilog model of Microchip M23LC1024 for
 ## Operation
 Out of reset, the controller is in the standard SPI mode which is supported by all SPI memories. 
 
-Performing a memory read or a memory write from/to the data region will trigger the corresponding SPI command and is fully transparent. To the CPU it is a normal memory/read operation.
+Performing a memory read or a memory write from/to the data region will trigger the corresponding SPI command and is fully transparent to the CPU and it looks like a normal memory/read operation.
 
 ### Switch to QPI mode
-1) Set RD/WR/Enter QPI/Exit QPI commands by writing to the corresponding configuration registers based on the memory supported command (consult the datasheet).
+1) Set RD/WR/Enter QPI/Exit QPI commands by writing to the corresponding configuration registers based on the memory datasheet.
 2) Set the number of wait states used by the read command by writing to the Wait States Register.
 3) Write "1" to the Initiate EQPI Mode process register.
 4) Perform a memory read/write to a data address
 5) Write "0" to the Initiate EQPI Mode process register.
-6) Wait for the memory to switch to quad i/o mode. Consult the datasheet to obtain the wait value.
+6) Wait for the memory to switch to quad i/o mode. Consult the datasheet to obtain the latency.
 7) Write "2" to the i/o mode register
 
