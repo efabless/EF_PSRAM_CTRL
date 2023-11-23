@@ -15,8 +15,7 @@
             "psram"
         ],
         "bus": [
-            "AHBL",
-            "WB"
+            "AHBL"
         ],
         "type": "soft",
         "status": "verified",
