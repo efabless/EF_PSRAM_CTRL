@@ -31,7 +31,8 @@
 */
 
 // Using EBH Command
-module EF_PSRAM_CTRL_V2_ahbl (
+module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1) 
+(
     // AHB-Lite Slave Interface
     input   wire            HCLK,
     input   wire            HRESETn,
@@ -86,11 +87,11 @@ module EF_PSRAM_CTRL_V2_ahbl (
 
     always@ (posedge HCLK or negedge HRESETn) begin
         if (!HRESETn) begin
-	    last_HSEL       <= 0;
-	    last_HADDR      <= 0;
-	    last_HWRITE     <= 0;
-	    last_HTRANS     <= 0;
-	    last_HSIZE      <= 0;
+            last_HSEL       <= 0;
+            last_HADDR      <= 0;
+            last_HWRITE     <= 0;
+            last_HTRANS     <= 0;
+            last_HSIZE      <= 0;
         end
         else if(HREADY) begin
             last_HSEL       <= HSEL;
@@ -149,7 +150,7 @@ module EF_PSRAM_CTRL_V2_ahbl (
     always @* begin
         case(state)
             ST_IDLE :   
-                if(ahb_addr_phase & data_cfg) 
+                if(start) 
                     nstate = ST_WAIT;
                 else
                     nstate = ST_IDLE;
@@ -169,7 +170,7 @@ module EF_PSRAM_CTRL_V2_ahbl (
         else
             case (state)
                 ST_IDLE :   
-                    if(ahb_addr_phase & data_cfg) 
+                    if((last_ahb_addr_phase|ahb_addr_phase) & data_cfg) 
                         HREADYOUT <= 1'b0;
                     else 
                         HREADYOUT <= 1'b1;
@@ -181,7 +182,6 @@ module EF_PSRAM_CTRL_V2_ahbl (
                         HREADYOUT <= 1'b0;
             endcase
 
-    assign  start   =   ( ahb_addr_phase & (state==ST_IDLE ) & data_cfg );
     assign  rd_wr   =   ~last_HWRITE;
     assign  cmd     =   ENTER_QPI_REG   ?   EQPI_CMD_REG    :
                         EXIT_QPI_REG    ?   XQPI_CMD_REG    :
@@ -191,11 +191,39 @@ module EF_PSRAM_CTRL_V2_ahbl (
     wire    short_cmd   =   (ENTER_QPI_REG|EXIT_QPI_REG);
     wire [23:0] mctrl_addr = {1'b0,last_HADDR[22:0]};
 
+    //generate    
+    //    if(REGISTER_HWDATA) begin
+        
+            reg [31:0]  data_i;
+            reg         last_ahb_addr_phase;
+
+            always @(posedge HCLK or negedge HRESETn) begin
+                if(!HRESETn)
+                    last_ahb_addr_phase <= 0;
+                else
+                    last_ahb_addr_phase <= ahb_addr_phase;
+            end
+            
+            always @(posedge HCLK)
+                if(last_ahb_addr_phase)
+                    data_i <= HWDATA;
+            
+            assign  start   =   ( last_ahb_addr_phase & (state == ST_IDLE ) & data_cfg );
+        
+        //end 
+        //else begin
+        /*
+            wire [31:0] data_i = HWDATA;
+            assign  start   =   ( ahb_addr_phase & (state == ST_IDLE ) & data_cfg );
+        */
+        //end    
+    //endgenerate
+    
     EF_PSRAM_CTRL_V2 MCTRL(
         .clk(HCLK), 
         .rst_n(HRESETn), 
 	    .addr(mctrl_addr), 
-        .data_i(HWDATA),
+        .data_i(data_i),
         .data_o(HRDATA),
         .size(size),
         .start(start),
