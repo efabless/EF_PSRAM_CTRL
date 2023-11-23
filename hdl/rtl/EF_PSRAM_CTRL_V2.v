@@ -148,12 +148,12 @@ module EF_PSRAM_CTRL_V2 (
                         (counter == 1)  ?   cmd[3:0]                    :
                         (counter == 2)  ?   addr[23:20]                 : 
                         (counter == 3)  ?   addr[19:16]                 :
-                        (counter == 4) ?   addr[15:12]                 :
-                        (counter == 5) ?   addr[11:8]                  :
-                        (counter == 6) ?   addr[7:4]                   :
-                        (counter == 7) ?   addr[3:0]                   :
-                        (counter == 8) ?   data_i[7:4]                 :
-                        (counter == 9) ?   data_i[3:0]                 :
+                        (counter == 4)  ?   addr[15:12]                 :
+                        (counter == 5)  ?   addr[11:8]                  :
+                        (counter == 6)  ?   addr[7:4]                   :
+                        (counter == 7)  ?   addr[3:0]                   :
+                        (counter == 8)  ?   data_i[7:4]                 :
+                        (counter == 9)  ?   data_i[3:0]                 :
                         (counter == 10) ?   data_i[15:12]               :
                         (counter == 11) ?   data_i[11:8]                :
                         (counter == 12) ?   data_i[23:20]               :
