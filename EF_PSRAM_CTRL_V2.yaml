@@ -1,0 +1,135 @@
+---
+info:
+  name: EF_PSRAM_CTRL_V2
+  description: A Controller for Quad I/O SPI PSRAM
+  repo: github.com/efabless/EF_PSRAM_CTRL_V2
+  owner: Efabless Corp.
+  license: Apache 2.0
+  author: Mohamed Shalan
+  email: mshalan@efabless.com
+  version: v1.0.4
+  date: 7-05-2024
+  category: digital
+  tags:
+    - memory
+    - psram
+  bus:
+    - AHBL
+  type: soft
+  status: verified
+  cell_count:
+    - IP: TBD
+    - AHBL: TBD
+  width: "0.0"
+  height: "0.0"
+  technology: n/a
+  clock_freq_mhz:
+    - IP: TBD
+    - AHBL: TBD
+  digital_supply_voltage: n/a
+  analog_supply_voltage: n/a
+
+external_interface:
+- name: sck
+  port: sck
+  width: 1
+  direction: output
+  description: SPI master output clock 
+- name: ce_n
+  port: ce_n
+  width: 1
+  direction: output 
+  description: SPI Master slave select.
+- name: din
+  port: din
+  width: 4
+  direction: input
+  description: SPI Master data in , slave out 
+- name: dout
+  port: dout
+  width: 4
+  direction: output 
+  description: SPI Master data out , slave in  
+- name: douten
+  port: douten
+  width: 4
+  direction: output 
+  description: SPI Master data out enable 
+
+registers:
+  - name: rd_cmd
+    size: 8
+    mode: w
+    fifo: no
+    offset: 0x0080_0100
+    bit_access: no
+    init: "3"
+    write_port: ""
+    description: RD Command Register
+  - name: wr_cmd
+    size: 8
+    mode: w
+    fifo: no
+    offset: 0x0080_0200
+    bit_access: no
+    init: "2"
+    write_port: ""
+    description: WR Command Register
+  - name: eqpi_cmd
+    size: 8
+    mode: w
+    fifo: no
+    offset: 0x0080_0400
+    bit_access: no
+    init: "35"
+    write_port: ""
+    description: Enter QPI Command Register
+  - name: xqpi_cmd
+    size: 8
+    mode: w
+    fifo: no
+    offset: 0x0080_0800
+    bit_access: no
+    init: "FE"
+    write_port: ""
+    description: Exit QPI Command Register
+  - name: wait_states
+    size: 4
+    mode: w
+    fifo: no
+    offset: 0x0080_1000
+    bit_access: no
+    init: "0"
+    write_port: ""
+    description: Wait States Register
+  - name: mode
+    size: 2
+    mode: w
+    fifo: no
+    offset: 0x0080_2000
+    bit_access: no
+    init: "0"
+    write_port: ""
+    description: I/O Mode Register, {qpi, qspi}
+  - name: enter_qpi
+    size: 1
+    mode: w
+    fifo: no
+    offset: 0x0080_4000
+    bit_access: no
+    init: "0"
+    write_port: ""
+    description: Initiate Enter QPI (EQPI) Mode process Register
+  - name: exit_qpi
+    size: 1
+    mode: w
+    fifo: no
+    offset: 0x0080_8000
+    bit_access: no
+    init: "0"
+    write_port: ""
+    description: Initiate Exit QPI (XQPI) Mode process Register
+clock: HCLK
+reset:
+  name: HRESETn
+  pol: "0"
