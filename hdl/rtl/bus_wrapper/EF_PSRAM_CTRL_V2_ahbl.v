@@ -76,6 +76,7 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
     wire        ahb_addr_phase  =   HTRANS[1] & HSEL & HREADY;
 
     wire        rd_wr;
+    reg         rd_wr_reg;
     wire [3:0]  wait_states;
     wire [7:0]  cmd;
     wire        qspi;
@@ -162,6 +163,7 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
                     nstate = ST_WAIT; 
         endcase
     end
+    reg         last_ahb_addr_phase;
 
     // HREADYOUT Generation
     always @(posedge HCLK or negedge HRESETn)
@@ -183,11 +185,15 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
             endcase
 
     assign  rd_wr   =   ~last_HWRITE;
+    always @(posedge HCLK or negedge HRESETn)
+        if(!HRESETn)
+            rd_wr_reg <= 1'b0;
+        else if (last_HTRANS[1])
+            rd_wr_reg <= rd_wr;
     assign  cmd     =   ENTER_QPI_REG   ?   EQPI_CMD_REG    :
                         EXIT_QPI_REG    ?   XQPI_CMD_REG    :
-                        rd_wr           ?   RD_CMD_REG      :
+                        rd_wr_reg           ?   RD_CMD_REG      :
                         WR_CMD_REG; 
-    
     wire    short_cmd   =   (ENTER_QPI_REG|EXIT_QPI_REG);
     wire [23:0] mctrl_addr = {1'b0,last_HADDR[22:0]};
 
@@ -195,7 +201,6 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
     //    if(REGISTER_HWDATA) begin
         
             reg [31:0]  data_i;
-            reg         last_ahb_addr_phase;
 
             always @(posedge HCLK or negedge HRESETn) begin
                 if(!HRESETn)
@@ -230,7 +235,7 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
         .done(done), 
         .wait_states(wait_states),
         .cmd(cmd),
-        .rd_wr(rd_wr),
+        .rd_wr(rd_wr_reg),
         .qspi(qspi),
         .qpi(qpi),
         .sck(sck), 
