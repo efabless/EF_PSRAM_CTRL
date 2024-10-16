@@ -63,7 +63,7 @@ registers:
     fifo: no
     offset: 0x0080_0100
     bit_access: no
-    init: "3"
+    init: "'h3"
     write_port: ""
     description: RD Command Register
   - name: wr_cmd
@@ -72,7 +72,7 @@ registers:
     fifo: no
     offset: 0x0080_0200
     bit_access: no
-    init: "2"
+    init: "'h2"
     write_port: ""
     description: WR Command Register
   - name: eqpi_cmd
@@ -81,7 +81,7 @@ registers:
     fifo: no
     offset: 0x0080_0400
     bit_access: no
-    init: "35"
+    init: "'h35"
     write_port: ""
     description: Enter QPI Command Register
   - name: xqpi_cmd
@@ -90,7 +90,7 @@ registers:
     fifo: no
     offset: 0x0080_0800
     bit_access: no
-    init: "FE"
+    init: "'hFE"
     write_port: ""
     description: Exit QPI Command Register
   - name: wait_states
@@ -99,7 +99,7 @@ registers:
     fifo: no
     offset: 0x0080_1000
     bit_access: no
-    init: "0"
+    init: "'h0"
     write_port: ""
     description: Wait States Register
   - name: mode
@@ -108,7 +108,7 @@ registers:
     fifo: no
     offset: 0x0080_2000
     bit_access: no
-    init: "0"
+    init: "'h0"
     write_port: ""
     description: I/O Mode Register, {qpi, qspi}
   - name: enter_qpi
@@ -117,7 +117,7 @@ registers:
     fifo: no
     offset: 0x0080_4000
     bit_access: no
-    init: "0"
+    init: "'h0"
     write_port: ""
     description: Initiate Enter QPI (EQPI) Mode process Register
   - name: exit_qpi
@@ -126,7 +126,7 @@ registers:
     fifo: no
     offset: 0x0080_8000
     bit_access: no
-    init: "0"
+    init: "'h0"
     write_port: ""
     description: Initiate Exit QPI (XQPI) Mode process Register
 clock: HCLK
