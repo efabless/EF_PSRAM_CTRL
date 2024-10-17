@@ -44,7 +44,7 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
     input   wire            HWRITE,
     input   wire            HREADY,
     output  reg             HREADYOUT,
-    output  wire [31:0]     HRDATA,
+    output  reg [31:0]      HRDATA,
 
     // External Interface to Quad I/O
     output  wire            sck,
@@ -85,6 +85,77 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
     // Hand-shaking Signals
     wire        start;
     wire        done;
+    reg [31:0]  data_i;
+    reg [31:0]  data_i_sized;
+    wire [31:0]  data_o;
+    
+    // handle hsize 
+    wire is_byte     = (last_HSIZE == 3'b000);
+    wire is_half     = (last_HSIZE == 3'b001);
+    wire is_word     = (last_HSIZE == 3'b010);
+
+    wire byte_0      = is_byte & (last_HADDR[1:0] == 2'b00);
+    wire byte_1      = is_byte & (last_HADDR[1:0] == 2'b01);
+    wire byte_2      = is_byte & (last_HADDR[1:0] == 2'b10);
+    wire byte_3      = is_byte & (last_HADDR[1:0] == 2'b11);
+
+    wire half_0      = is_half & ~last_HADDR[1];
+    wire half_2      = is_half & last_HADDR[1];
+    
+    always @(*) begin
+        if (is_word) begin
+            data_i_sized = data_i;  // Assign the full word
+        end
+        else if (is_half) begin
+            if (half_0) begin
+                data_i_sized = data_i[15:0];  // Assign lower half-word
+            end
+            else begin
+                data_i_sized = data_i[31:16];  // Assign upper half-word
+            end
+        end
+        else begin
+            if (byte_0) begin
+                data_i_sized = data_i[7:0];  // Assign first byte
+            end
+            else if (byte_1) begin
+                data_i_sized = data_i[15:8];  // Assign second byte
+            end
+            else if (byte_2) begin
+                data_i_sized = data_i[23:16];  // Assign third byte
+            end
+            else begin
+                data_i_sized = data_i[31:24];  // Assign fourth byte
+            end
+        end
+    end
+
+    always @(*) begin
+        if (is_word) begin
+            HRDATA = data_o;  // Assign the full word
+        end
+        else if (is_half) begin
+            if (half_0) begin
+                HRDATA = data_o[15:0];  // Assign lower half-word
+            end
+            else begin
+                HRDATA = {data_o[15:0], 16'b0};  // Assign upper half-word
+            end
+        end else begin
+            if (byte_0) begin
+                HRDATA = data_o[7:0];  // Assign first byte
+            end
+            else if (byte_1) begin
+                HRDATA = {data_o[7:0], 8'b0};  // Assign second byte
+            end
+            else if (byte_2) begin
+                HRDATA = {data_o[7:0], 16'b0};  // Assign third byte
+            end
+            else begin
+                HRDATA = {data_o[7:0], 24'b0};  // Assign fourth byte
+            end
+        end
+    end
 
     always@ (posedge HCLK or negedge HRESETn) begin
         if (!HRESETn) begin
@@ -200,7 +271,6 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
     //generate    
     //    if(REGISTER_HWDATA) begin
         
-            reg [31:0]  data_i;
 
             always @(posedge HCLK or negedge HRESETn) begin
                 if(!HRESETn)
@@ -228,8 +298,8 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
         .clk(HCLK), 
         .rst_n(HRESETn), 
 	    .addr(mctrl_addr), 
-        .data_i(data_i),
-        .data_o(HRDATA),
+        .data_i(data_i_sized),
+        .data_o(data_o),
         .size(size),
         .start(start),
         .done(done), 
