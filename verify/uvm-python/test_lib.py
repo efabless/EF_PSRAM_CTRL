@@ -40,6 +40,7 @@ from psram_bus_item import psram_bus_item
 from psram_seq_lib.psram_spi_seq import psram_spi_seq
 from psram_seq_lib.psram_sqi_seq import psram_sqi_seq
 from psram_seq_lib.psram_sdi_seq import psram_sdi_seq
+from psram_seq_lib.psram_hsize_seq import psram_hsize_seq
 
 @cocotb.test()
 async def module_top(dut):
@@ -190,6 +191,26 @@ class psram_sdi_test(psram_base_test):
         await super().shutdown_phase(phase)
         self.check_mode(1)  # SDI
 
+class psram_hsize_test(psram_base_test):
+    def __init__(self, name="psram__first_test", parent=None):
+        super().__init__(name, parent=parent)
+        self.tag = name
 
-uvm_component_utils(psram_sdi_test)
+    async def main_phase(self, phase):
+        uvm_info(self.tag, f"Starting test {self.__class__.__name__}", UVM_LOW)
+        phase.raise_objection(self, f"{self.__class__.__name__} OBJECTED")
+        # TODO: conntect sequence with sequencer here
+        # for example if you need to run the 2 sequence sequentially
+        bus_seq = psram_hsize_seq("psram_hsize_seq")
+        # ip_seq = psram_ip_seq("psram_ip_seq")
+        await bus_seq.start(self.bus_sqr)
+        # await ip_seq.start(self.ip_sqr)
+        phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
+
+    async def shutdown_phase(self, phase):
+        await super().shutdown_phase(phase)
+        self.check_mode(0)  # SPI
+
+
+uvm_component_utils(psram_hsize_test)
 
