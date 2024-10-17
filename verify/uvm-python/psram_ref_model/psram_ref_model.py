@@ -61,19 +61,9 @@ class psram_ref_model(ref_model):
                 if tr.size == bus_item.WORD_ACCESS:
                     self.external_mem.write_word(addr_wr, tr.data)
                 elif tr.size == bus_item.HALF_WORD_ACCESS:
-                    if addr_wr % 4 == 0:
-                        self.external_mem.write_halfword(addr_wr, tr.data & 0xFFFF) 
-                    else:
-                        self.external_mem.write_halfword(addr_wr, tr.data >> 16)
+                    self.external_mem.write_halfword(addr_wr, tr.data & 0xFFFF) 
                 elif tr.size == bus_item.BYTE_ACCESS:
-                    if addr_wr % 4 == 0:
-                        self.external_mem.write_byte(addr_wr, tr.data & 0xFF)
-                    elif addr_wr % 4 == 1:
-                        self.external_mem.write_byte(addr_wr, (tr.data >> 8) & 0xFF)
-                    elif addr_wr % 4 == 2:
-                        self.external_mem.write_byte(addr_wr, (tr.data >> 16) & 0xFF)
-                    else:
-                        self.external_mem.write_byte(addr_wr, (tr.data >> 24) & 0xFF)
+                    self.external_mem.write_byte(addr_wr, tr.data & 0xFF)
                 else:
                     self.regs.write_reg_value(tr.addr, tr.data)
                 self.bus_bus_export.write(tr) # this is output to the scoreboard
