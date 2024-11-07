@@ -57,16 +57,16 @@ class psram_ref_model(ref_model):
             # TODO: write logic needed when write transaction is received
             # For example, to write the same value to the same resgiter uncomment the following lines
             if tr.addr & 0xFFF00000 == 0x00700000: # access to the external memory
-                addr = tr.addr & 0xFFFFF
+                addr_wr = tr.addr & 0xFFFFF
                 if tr.size == bus_item.WORD_ACCESS:
-                    self.external_mem.write_word(addr, tr.data)
+                    self.external_mem.write_word(addr_wr, tr.data)
                 elif tr.size == bus_item.HALF_WORD_ACCESS:
-                    self.external_mem.write_halfword(addr, tr.data)
+                    self.external_mem.write_halfword(addr_wr, tr.data & 0xFFFF) 
                 elif tr.size == bus_item.BYTE_ACCESS:
-                    self.external_mem.write_byte(addr, tr.data)
-            else:
-                self.regs.write_reg_value(tr.addr, tr.data)
-            self.bus_bus_export.write(tr) # this is output to the scoreboard
+                    self.external_mem.write_byte(addr_wr, tr.data & 0xFF)
+                else:
+                    self.regs.write_reg_value(tr.addr, tr.data)
+                self.bus_bus_export.write(tr) # this is output to the scoreboard
 
             # check if the write register is icr , set the icr changed event
         elif tr.kind == bus_item.READ:
