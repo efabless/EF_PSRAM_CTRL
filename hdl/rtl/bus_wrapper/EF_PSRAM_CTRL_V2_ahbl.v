@@ -70,7 +70,8 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
                         (last_HSIZE == 1) ? 2 :
                         (last_HSIZE == 2) ? 4 : 4;
 
-    wire        data_cfg        =   ~HADDR[23];
+    // wire        data_cfg        =   ~HADDR[23];
+    reg data_cfg;
     wire        last_data_cfg   =   ~last_HADDR[23];
     wire        control         =   HADDR[22];
     wire        ahb_addr_phase  =   HTRANS[1] & HSEL & HREADY;
@@ -163,15 +164,22 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
             last_HADDR      <= 0;
             last_HWRITE     <= 0;
             last_HTRANS     <= 0;
-            last_HSIZE      <= 0;
+            // last_HSIZE      <= 0;
         end
         else if(HREADY) begin
             last_HSEL       <= HSEL;
             last_HADDR      <= HADDR;
             last_HWRITE     <= HWRITE;
             last_HTRANS     <= HTRANS;
-            last_HSIZE      <= HSIZE;
+            // last_HSIZE      <= HSIZE;
         end
+    end
+
+    always@(posedge HCLK or negedge HRESETn) begin 
+        if(!HRESETn) 
+            last_HSIZE <= 0;
+        else if (HTRANS[1])
+                last_HSIZE<=HSIZE;
     end
 
     // Configuration Interface
@@ -285,6 +293,12 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
             
             assign  start   =   ( last_ahb_addr_phase & (state == ST_IDLE ) & data_cfg );
         
+        always@(posedge HCLK or negedge HRESETn)
+        if(!HRESETn)
+            data_cfg <= 0;
+        else if (ahb_addr_phase)
+            data_cfg <= ~HADDR[23];
+
         //end 
         //else begin
         /*
