@@ -307,9 +307,23 @@ module EF_PSRAM_CTRL_V2_ahbl #(parameter REGISTER_HWDATA = 1)
         */
         //end    
     //endgenerate
-    
+    wire    ahbl_valid	= last_HSEL & last_HTRANS[1];
+    wire	ahbl_we	= last_HWRITE & ahbl_valid;
+	localparam	GCLK_REG_OFFSET = 16'hFF10;
+    reg [0:0] GCLK_REG;
+    always @(posedge HCLK or negedge HRESETn) if(~HRESETn) GCLK_REG <= 0;
+                                    else if(ahbl_we & (last_HADDR[16-1:0]==GCLK_REG_OFFSET))
+                                        GCLK_REG <= HWDATA[1-1:0];
+    wire clk_g;
+    wire clk_gated_en = GCLK_REG[0];
+    ef_gating_cell clk_gate_cell(
+        .clk(HCLK),
+        .clk_en(clk_gated_en),
+        .clk_o(clk_g)
+    );
+
     EF_PSRAM_CTRL_V2 MCTRL(
-        .clk(HCLK), 
+        .clk(clk_g), 
         .rst_n(HRESETn), 
 	    .addr(mctrl_addr), 
         .data_i(data_i_sized),
