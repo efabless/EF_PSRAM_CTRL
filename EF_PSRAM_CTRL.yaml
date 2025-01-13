@@ -1,12 +1,28 @@
 ---
 info:
-  name: EF_PSRAM_CTRL_V2
-  description: A Controller for Quad I/O SPI PSRAM
-  repo: github.com/efabless/EF_PSRAM_CTRL_V2
+  name: EF_PSRAM_CTRL
+  description: |
+    A Controller for Quad I/O SPI PSRAM
+      Pseudostatic RAM (PSRAM) is DRAM combined with a self-refresh circuit. 
+      It appears externally as slower SRAM, albeit with a density/cost advantage 
+      over true SRAM, and without the access complexity of DRAM.
+      The controller was designed after:
+    - https://www.issi.com/WW/pdf/66-67WVS4M8ALL-BLL.pdf and
+    - https://www.microchip.com/en-us/parametric-search/514
+
+    utilizing SPI, QSPI and QPI modes.
+
+    The controller was verified against the Verilog model of Microchip M23LC1024 for SPI and QPI modes only.
+
+    ##### Features:
+    - Small in size (800 cells)
+    - Supports PSRAM or serial SRAM memories up to 8MBytes.
+    - Programmable to configure: read/write commands, number of wait states, enter and exist quad i/o commands.
+  repo: github.com/efabless/EF_PSRAM_CTRL
   owner: Efabless Corp.
   license: Apache 2.0
-  author: Mohamed Shalan
-  email: mshalan@efabless.com
+  author: Efabless Corp.
+  email: ip_admin@efabless.com
   version: v1.0.8
   date: 27-11-2024
   category: digital
@@ -129,7 +145,9 @@ registers:
     init: "'h0"
     write_port: ""
     description: Initiate Exit QPI (XQPI) Mode process Register
-clock: HCLK
+clock: 
+  name: HCLK
+  gated: "no"
 reset:
   name: HRESETn
   pol: "0"

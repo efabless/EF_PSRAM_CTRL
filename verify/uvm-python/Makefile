@@ -1,10 +1,10 @@
 PLUSARGS += "+UVM_VERBOSITY=UVM_MEDUIM"
 TOPLEVEL := top
 MODULE   ?= top_module
-AHB_FILES ?= $(PWD)/../../hdl/rtl/bus_wrapper/EF_PSRAM_CTRL_V2_ahbl.v
+AHB_FILES ?= $(PWD)/../../hdl/rtl/bus_wrapper/EF_PSRAM_CTRL_AHBL.v
 APB_FILES ?= # TODO: Add add APB wrapper file path
 WB_FILES ?= # TODO: Add add WB wrapper file path
-HDL_FILES ?= $(PWD)/../../hdl/rtl/EF_PSRAM_CTRL_V2.v
+HDL_FILES ?= $(PWD)/../../hdl/rtl/EF_PSRAM_CTRL.v
 VIP_FILES ?= $(PWD)/23LC1024.v
 VERILOG_SOURCES ?=  $(PWD)/top.v $(AHB_FILES) $(HDL_FILES) $(VIP_FILES)
 RTL_MACROS += "" # Add macros needed

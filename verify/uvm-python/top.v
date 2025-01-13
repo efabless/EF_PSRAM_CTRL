@@ -31,7 +31,7 @@ module top();
         wire [2:0] HSIZE;
         // TODO: initialize the AHB wrapper here
         // for example
-        EF_PSRAM_CTRL_V2_ahbl dut(.HCLK(CLK), .HRESETn(RESETn), .HADDR(HADDR), .HWRITE(HWRITE), .HSEL(HSEL), .HSIZE(HSIZE), .HTRANS(HTRANS), .HWDATA(HWDATA), .HRDATA(HRDATA), .HREADY(HREADY),.HREADYOUT(HREADYOUT), .sck(sck), .ce_n(ce_n), .din(din), .dout(dout), .douten(douten));
+        EF_PSRAM_CTRL_AHBL dut(.HCLK(CLK), .HRESETn(RESETn), .HADDR(HADDR), .HWRITE(HWRITE), .HSEL(HSEL), .HSIZE(HSIZE), .HTRANS(HTRANS), .HWDATA(HWDATA), .HRDATA(HRDATA), .HREADY(HREADY),.HREADYOUT(HREADYOUT), .sck(sck), .ce_n(ce_n), .din(din), .dout(dout), .douten(douten));
     `endif // BUS_TYPE_AHB
     M23LC1024 slave(
         .SCK(sck),

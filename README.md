@@ -1,4 +1,4 @@
-# EF_PSRAM_CTRL_V2
+# EF_PSRAM_CTRL
 
 Pseudostatic RAM (PSRAM) is DRAM combined with a self-refresh circuit. 
     It appears externally as slower SRAM, albeit with a density/cost advantage 
@@ -26,7 +26,16 @@ The controller was verified against the Verilog model of Microchip M23LC1024 for
 
 ```verilog
 EF_PSRAM_CTRL_V2_ahbl INST (
-        `TB_AHBL_SLAVE_CONN,
+        .HCLK(CLK), 
+        .HRESETn(RESETn), 
+        .HADDR(HADDR), 
+        .HWRITE(HWRITE), 
+        .HSEL(HSEL), 
+        .HTRANS(HTRANS), 
+        .HWDATA(HWDATA),
+        .HRDATA(HRDATA), 
+        .HREADY(HREADY),
+        .HREADYOUT(HREADYOUT),
         .sck(sck),
         .ce_n(ce_n),
         .din(din),
@@ -34,7 +43,6 @@ EF_PSRAM_CTRL_V2_ahbl INST (
         .douten(douten)
 );
 ```
-> **_NOTE:_** `TB_AHBL_SLAVE_CONN is a convenient macro provided by [BusWrap](https://github.com/efabless/BusWrap/tree/main).
 
 ## Implementation example  
 
@@ -112,27 +120,20 @@ Initiate Exit QPI (XQPI) Mode process Register
 
 
 ## The Interface 
-<img src="docs/EF_PSRAM_CTRL_V2_ahbl.svg" width="600"/>
+<img src="docs/_static/EF_PSRAM_CTRL_AHBL.svg" width="600"/>
 
-## F/W Usage Guidelines:
-Out of reset, the controller is in the standard SPI mode which is supported by all SPI memories. 
-
-Performing a memory read or a memory write from/to the data region will trigger the corresponding SPI command and is fully transparent to the CPU and it looks like a normal memory/read operation.
-
-##### Switch to QPI mode:
-1) Set RD/WR/Enter QPI/Exit QPI commands by writing to the corresponding configuration registers based on the memory datasheet.
-2) Set the number of wait states used by the read command by writing to the Wait States Register.
-3) Write "1" to the Initiate EQPI Mode process register.
-4) Perform a memory read/write to a data address
-5) Write "0" to the Initiate EQPI Mode process register.
-6) Wait for the memory to switch to quad i/o mode. Consult the datasheet to obtain the latency.
-7) Write "2" to the i/o mode register
+## Firmware Drivers:
+Firmware drivers for EF_PSRAM_CTRL can be found in the [fw](https://github.com/efabless/EF_PSRAM_CTRL/tree/main/fw) directory. EF_PSRAM_CTRL driver documentation  is available [here](https://github.com/efabless/EF_PSRAM_CTRL/blob/main/fw/README.md).
+You can also find an example C application using the EF_PSRAM_CTRL drivers [here]().
 
 ## Installation:
-You can either clone repo or use [IPM](https://github.com/efabless/IPM) which is an open-source IPs Package Manager
-* To clone repo:
-```git clone https://github.com/efabless/EF_PSRAM_CTRL_V2```
-* To download via IPM , follow installation guides [here](https://github.com/efabless/IPM/blob/main/README.md) then run 
-```ipm install EF_PSRAM_CTRL```
-### Run cocotb UVM Testbench:
-TBD
+You can install the IP either by cloning this repository or by using [IPM](https://github.com/efabless/IPM).
+##### 1. Using [IPM](https://github.com/efabless/IPM):
+- [Optional] If you do not have IPM installed, follow the installation guide [here](https://github.com/efabless/IPM/blob/main/README.md)
+- After installing IPM, execute the following command ```ipm install EF_PSRAM_CTRL```.
+> **Note:** This method is recommended as it automatically installs [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) as a dependency.
+##### 2. Cloning this repo: 
+- Clone [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) repository, which includes the required modules from the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v).
+```git clone https://github.com/efabless/EF_IP_UTIL.git```
+- Clone the IP repository
+```git clone github.com/efabless/EF_PSRAM_CTRL```
