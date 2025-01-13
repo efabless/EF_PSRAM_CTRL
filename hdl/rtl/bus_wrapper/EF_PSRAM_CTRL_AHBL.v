@@ -311,7 +311,7 @@ module EF_PSRAM_CTRL_AHBL #(parameter REGISTER_HWDATA = 1)
         //end    
     //endgenerate
     
-    EF_PSRAM_CTRL_V2 MCTRL(
+    EF_PSRAM_CTRL MCTRL(
         .clk(HCLK), 
         .rst_n(HRESETn), 
 	    .addr(mctrl_addr), 

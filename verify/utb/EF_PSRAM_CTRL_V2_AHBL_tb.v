@@ -16,7 +16,7 @@
 
 `timescale              1ns/1ps
 
-module EF_PSRAM_CTRL_V2_ahbl_tb;
+module EF_PSRAM_CTRL_ahbl_tb;
     wire[3:0]       dio;
     reg            HCLK = 0;
     reg            HRESETn = 0;
@@ -38,7 +38,7 @@ module EF_PSRAM_CTRL_V2_ahbl_tb;
 
     `include "AHB_tasks.vh"
 
-    EF_PSRAM_CTRL_V2_ahbl psram_ctrl(
+    EF_PSRAM_CTRL_ahbl psram_ctrl(
         // AHB-Lite Slave Interface
         .HCLK(HCLK),
         .HRESETn(HRESETn),

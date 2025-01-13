@@ -25,7 +25,7 @@ The controller was verified against the Verilog model of Microchip M23LC1024 for
 ### Wrapped IP System Integration
 
 ```verilog
-EF_PSRAM_CTRL_V2_ahbl INST (
+EF_PSRAM_CTRL_AHBL INST (
         .HCLK(CLK), 
         .HRESETn(RESETn), 
         .HADDR(HADDR), 
@@ -46,11 +46,11 @@ EF_PSRAM_CTRL_V2_ahbl INST (
 
 ## Implementation example  
 
-The following table is the result for implementing the EF_PSRAM_CTRL_V2 IP with different wrappers using Sky130 PDK and [OpenLane2](https://github.com/efabless/openlane2) flow.
+The following table is the result for implementing the EF_PSRAM_CTRL IP with different wrappers using Sky130 PDK and [OpenLane2](https://github.com/efabless/openlane2) flow.
 |Module | Number of cells | Max. freq |
 |---|---|---|
-|EF_PSRAM_CTRL_V2|TBD| TBD |
-|EF_PSRAM_CTRL_V2_AHBL|TBD|TBD|
+|EF_PSRAM_CTRL|TBD| TBD |
+|EF_PSRAM_CTRL_AHBL|TBD|TBD|
 ## The Programmer's Interface
 
 ### Memory Map

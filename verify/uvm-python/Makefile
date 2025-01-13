@@ -10,7 +10,7 @@ VERILOG_SOURCES ?=  $(PWD)/top.v $(AHB_FILES) $(HDL_FILES) $(VIP_FILES)
 RTL_MACROS += "" # Add macros needed
 BUS_TYPE ?= AHB
 RTL_MACROS += -DBUS_TYPE_AHB
-DESIGN_NAME = EF_PSRAM_CTRL_V2_ahbl
+DESIGN_NAME = EF_PSRAM_CTRL_ahbl
 export CLK_MAKEFILE = HCLK
 export RST_MAKEFILE = HRESETn
 ## netlist Gen 
@@ -29,7 +29,7 @@ POST_SYS_FILES = $(PWD)/top.v $(VIP_FILES) $(PWD)/../../hdl/gl/synthesis/nl/$(DE
 #     RTL_MACROS += -DBUS_TYPE_WISHBONE
 # endif
 # RTL_MACROS ?= "-DSKIP_WAVE_DUMP"
-YAML_FILE = $(PWD)/../../EF_PSRAM_CTRL_V2.yaml # TODO: update yaml file path
+YAML_FILE = $(PWD)/../../EF_PSRAM_CTRL.yaml # TODO: update yaml file path
 MAKEFLAGS += --no-print-directory
 
 # List of tests
