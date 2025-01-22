@@ -1,0 +1,673 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_e_f___p_s_r_a_m___c_t_r_l_8h" kind="file" language="C++">
+    <compoundname>EF_PSRAM_CTRL.h</compoundname>
+    <includes refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h" local="yes">EF_PSRAM_CTRL_regs.h</includes>
+    <includes refid="_e_f___driver___common_8h" local="yes">EF_Driver_Common.h</includes>
+    <includedby refid="_e_f___p_s_r_a_m___c_t_r_l_8c" local="yes">EF_PSRAM_CTRL.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>EF_Driver_Common.h</label>
+        <link refid="_e_f___driver___common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EF_PSRAM_CTRL.h</label>
+        <link refid="_e_f___p_s_r_a_m___c_t_r_l_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EF_PSRAM_CTRL_regs.h</label>
+        <link refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>EF_PSRAM_CTRL.c</label>
+        <link refid="_e_f___p_s_r_a_m___c_t_r_l_8c"/>
+      </node>
+      <node id="1">
+        <label>EF_PSRAM_CTRL.h</label>
+        <link refid="_e_f___p_s_r_a_m___c_t_r_l_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_BASE</name>
+        <initializer>0x00000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="38" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a7b5f413634f857d2462abd05de999d2b" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_RD_CMD_REG_ADDR</name>
+        <initializer>(<ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" kindref="member">EF_PSRAM_CTRL_BASE</ref> + 0x00800100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="40" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a726f3c8a19f68c6d21e110641f4ead68" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_WR_CMD_REG_ADDR</name>
+        <initializer>(<ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" kindref="member">EF_PSRAM_CTRL_BASE</ref> + 0x00800200)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="41" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a8861c98b936f37ff9cbe3e45320828f1" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EQPI_CMD_REG_ADDR</name>
+        <initializer>(<ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" kindref="member">EF_PSRAM_CTRL_BASE</ref> + 0x00800400)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="42" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a6384c14635872d67b3adf869f0b9d12d" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_XQPI_CMD_REG_ADDR</name>
+        <initializer>(<ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" kindref="member">EF_PSRAM_CTRL_BASE</ref> + 0x00800800)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="43" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a5a68b93396e96e1d500219be2fb10f7e" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_WAIT_STATES_REG_ADDR</name>
+        <initializer>(<ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" kindref="member">EF_PSRAM_CTRL_BASE</ref> + 0x00801000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="44" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a7d71c1ca5b545bde458a6769518ce4da" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_MODE_REG_ADDR</name>
+        <initializer>(<ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" kindref="member">EF_PSRAM_CTRL_BASE</ref> + 0x00802000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="45" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a5cf3ca8c52b1f5a2f258e3be02fccd3e" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_ENTER_QPI_REG_ADDR</name>
+        <initializer>(<ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" kindref="member">EF_PSRAM_CTRL_BASE</ref> + 0x00804000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="46" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a79559ad63927b2658c434bf72683664f" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EXIT_QPI_REG_ADDR</name>
+        <initializer>(<ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" kindref="member">EF_PSRAM_CTRL_BASE</ref> + 0x00808000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="47" column="13" bodyfile="EF_PSRAM_CTRL.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a9e5c88b0434806e822bd95f84d618d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_setReadCMD</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)</argsstring>
+        <name>PSRAM_setReadCMD</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the read command for the PSRAM controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="76" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="55" bodyend="68" declfile="EF_PSRAM_CTRL.h" declline="76" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1adfd177be696b801a70e2712fe618e352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_setWriteCMD</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)</argsstring>
+        <name>PSRAM_setWriteCMD</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the write command for the PSRAM controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="85" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="70" bodyend="84" declfile="EF_PSRAM_CTRL.h" declline="85" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a67992ca7ff4d7af00d3d44bc2fac5fa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_setEnterQPIcmd</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)</argsstring>
+        <name>PSRAM_setEnterQPIcmd</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the enter QPI command for the PSRAM controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="96" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="86" bodyend="102" declfile="EF_PSRAM_CTRL.h" declline="96" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a3caf16ef150bcce0c77932d856e9ab1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_setExitQPIcmd</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)</argsstring>
+        <name>PSRAM_setExitQPIcmd</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the exit QPI command for the PSRAM controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="115" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="104" bodyend="118" declfile="EF_PSRAM_CTRL.h" declline="115" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a7950dc0e4e0d4a9f1f0508dd34d1e4fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_setWaitStates</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)</argsstring>
+        <name>PSRAM_setWaitStates</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the wait states for the PSRAM controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="124" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="120" bodyend="136" declfile="EF_PSRAM_CTRL.h" declline="124" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a6f812852b12afdd045d9bb406fba146a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_setMode</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)</argsstring>
+        <name>PSRAM_setMode</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mode for the PSRAM controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="134" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="138" bodyend="153" declfile="EF_PSRAM_CTRL.h" declline="134" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a4225b269b8463c02840bc37ae447722c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_initiateEnterQPI</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)</argsstring>
+        <name>PSRAM_initiateEnterQPI</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Initiate Enter QPI (EQPI) Mode process Register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="145" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="155" bodyend="171" declfile="EF_PSRAM_CTRL.h" declline="145" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a778f4493831ed717f01243ff5120ebc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_initiateExitQPI</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)</argsstring>
+        <name>PSRAM_initiateExitQPI</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Initiate Exit QPI (XQPI) Mode process Register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="154" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="173" bodyend="187" declfile="EF_PSRAM_CTRL.h" declline="154" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a8e42e6e50659ed71c2aa708490ddc740" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_writeWord</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t addr, uint32_t word)</argsstring>
+        <name>PSRAM_writeWord</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+<para>Write a word to the PSRAM external memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address in the external memory to write the word to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">word</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The word to write to the external memory</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="166" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="189" bodyend="202" declfile="EF_PSRAM_CTRL.h" declline="166" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___p_s_r_a_m___c_t_r_l_8h_1a96d1923351e3122eb102640605a3e81c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS PSRAM_readWord</definition>
+        <argsstring>(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t addr, uint32_t *word)</argsstring>
+        <name>PSRAM_readWord</name>
+        <param>
+          <type><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref></type>
+          <declname>psram</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+<para>Read a word from the PSRAM external memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">psram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An EF_PSRAM_TYPE_PTR , which points to the base memory address of PSRAM registers. EF_PSRAM_TYPE is a structure that contains the PSRAM registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address in the external memory to read the word from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">word</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The word read from the external memory</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type <ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref> : returns a success or error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL.h" line="177" column="18" bodyfile="EF_PSRAM_CTRL.c" bodystart="204" bodyend="219" declfile="EF_PSRAM_CTRL.h" declline="177" declcolumn="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>C header file for TMR32 APIs which contains the function prototypes. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>2025<sp/>Efabless<sp/>Corp.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EF_PSRAM_CTRL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>Includes</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h" kindref="compound">EF_PSRAM_CTRL_regs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_e_f___driver___common_8h" kindref="compound">EF_Driver_Common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*<sp/>Macros<sp/>and<sp/>Constants</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1aebe8e6f9515b96f37ee70c811016382f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_BASE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a7b5f413634f857d2462abd05de999d2b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_RD_CMD_REG_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EF_PSRAM_CTRL_BASE<sp/>+<sp/>0x00800100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a726f3c8a19f68c6d21e110641f4ead68" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_WR_CMD_REG_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EF_PSRAM_CTRL_BASE<sp/>+<sp/>0x00800200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a8861c98b936f37ff9cbe3e45320828f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_EQPI_CMD_REG_ADDR<sp/><sp/><sp/><sp/><sp/><sp/>(EF_PSRAM_CTRL_BASE<sp/>+<sp/>0x00800400)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a6384c14635872d67b3adf869f0b9d12d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_XQPI_CMD_REG_ADDR<sp/><sp/><sp/><sp/><sp/><sp/>(EF_PSRAM_CTRL_BASE<sp/>+<sp/>0x00800800)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a5a68b93396e96e1d500219be2fb10f7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_WAIT_STATES_REG_ADDR<sp/><sp/><sp/>(EF_PSRAM_CTRL_BASE<sp/>+<sp/>0x00801000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a7d71c1ca5b545bde458a6769518ce4da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_MODE_REG_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(EF_PSRAM_CTRL_BASE<sp/>+<sp/>0x00802000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a5cf3ca8c52b1f5a2f258e3be02fccd3e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_ENTER_QPI_REG_ADDR<sp/><sp/><sp/><sp/><sp/>(EF_PSRAM_CTRL_BASE<sp/>+<sp/>0x00804000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a79559ad63927b2658c434bf72683664f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>EF_PSRAM_CTRL_EXIT_QPI_REG_ADDR<sp/><sp/><sp/><sp/><sp/><sp/>(EF_PSRAM_CTRL_BASE<sp/>+<sp/>0x00808000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//volatile<sp/>unsigned<sp/>uint32_t<sp/>*<sp/>ef_psram_ctrl_rd_cmd<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(volatile<sp/>unsigned<sp/>uint32_t<sp/>*)<sp/>EF_PSRAM_CTRL_RD_CMD_REG_ADDR<sp/><sp/><sp/><sp/><sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//volatile<sp/>unsigned<sp/>uint32_t<sp/>*<sp/>ef_psram_ctrl_wr_cmd<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(volatile<sp/>unsigned<sp/>uint32_t<sp/>*)<sp/>EF_PSRAM_CTRL_WR_CMD_REG_ADDR<sp/><sp/><sp/><sp/><sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//volatile<sp/>unsigned<sp/>uint32_t<sp/>*<sp/>ef_psram_ctrl_eqpi_cmd<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(volatile<sp/>unsigned<sp/>uint32_t<sp/>*)<sp/>EF_PSRAM_CTRL_EQPI_CMD_REG_ADDR<sp/><sp/><sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//volatile<sp/>unsigned<sp/>uint32_t<sp/>*<sp/>ef_psram_ctrl_xqpi_cmd<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(volatile<sp/>unsigned<sp/>uint32_t<sp/>*)<sp/>EF_PSRAM_CTRL_XQPI_CMD_REG_ADDR<sp/><sp/><sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//volatile<sp/>unsigned<sp/>uint32_t<sp/>*<sp/>ef_psram_ctrl_wait_states<sp/><sp/><sp/><sp/>=<sp/>(volatile<sp/>unsigned<sp/>uint32_t<sp/>*)<sp/>EF_PSRAM_CTRL_WAIT_STATES_REG_ADDR;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//volatile<sp/>unsigned<sp/>uint32_t<sp/>*<sp/>ef_psram_ctrl_mode<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(volatile<sp/>unsigned<sp/>uint32_t<sp/>*)<sp/>EF_PSRAM_CTRL_MODE_REG_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//volatile<sp/>unsigned<sp/>uint32_t<sp/>*<sp/>ef_psram_ctrl_enter_qpi<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(volatile<sp/>unsigned<sp/>uint32_t<sp/>*)<sp/>EF_PSRAM_CTRL_ENTER_QPI_REG_ADDR<sp/><sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//volatile<sp/>unsigned<sp/>uint32_t<sp/>*<sp/>ef_psram_ctrl_exit_qpi<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(volatile<sp/>unsigned<sp/>uint32_t<sp/>*)<sp/>EF_PSRAM_CTRL_EXIT_QPI_REG_ADDR<sp/><sp/><sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">*<sp/>Typedefs<sp/>and<sp/>Enums</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">*<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a9e5c88b0434806e822bd95f84d618d24" kindref="member">PSRAM_setReadCMD</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1adfd177be696b801a70e2712fe618e352" kindref="member">PSRAM_setWriteCMD</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//uint32_t<sp/>PSRAM_getWrireCMD();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a67992ca7ff4d7af00d3d44bc2fac5fa2" kindref="member">PSRAM_setEnterQPIcmd</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//uint32_t<sp/>PSRAM_getEnterQPIcmd();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a67992ca7ff4d7af00d3d44bc2fac5fa2" kindref="member">PSRAM_setEnterQPIcmd</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a3caf16ef150bcce0c77932d856e9ab1d" kindref="member">PSRAM_setExitQPIcmd</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a7950dc0e4e0d4a9f1f0508dd34d1e4fc" kindref="member">PSRAM_setWaitStates</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a6f812852b12afdd045d9bb406fba146a" kindref="member">PSRAM_setMode</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a4225b269b8463c02840bc37ae447722c" kindref="member">PSRAM_initiateEnterQPI</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a778f4493831ed717f01243ff5120ebc6" kindref="member">PSRAM_initiateExitQPI</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a8e42e6e50659ed71c2aa708490ddc740" kindref="member">PSRAM_writeWord</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>addr,<sp/>uint32_t<sp/>word);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l_8h_1a96d1923351e3122eb102640605a3e81c" kindref="member">PSRAM_readWord</ref>(<ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">EF_PSRAM_CTRL_TYPE_PTR</ref><sp/>psram,<sp/>uint32_t<sp/>addr,<sp/>uint32_t<sp/>*word);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="180"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
+<codeline lineno="181"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//EF_PSRAM_CTRL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="188"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="189"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="EF_PSRAM_CTRL.h"/>
+  </compounddef>
+</doxygen>

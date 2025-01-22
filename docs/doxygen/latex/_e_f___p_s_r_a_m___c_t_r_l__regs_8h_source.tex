@@ -1,0 +1,125 @@
+\hypertarget{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_source}{}\doxysection{EF\+\_\+\+PSRAM\+\_\+\+CTRL\+\_\+regs.\+h}
+\mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ Copyright\ 2024\ Efabless\ Corp.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ Author:\ Efabless\ Corp.\ (ip\_admin@efabless.com)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ \ \ \ \ www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ EF\_PSRAM\_CTRLREGS\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRLREGS\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ Includes}}
+\DoxyCodeLine{00026\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ Macros\ and\ Constants}}
+\DoxyCodeLine{00031\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#ifndef\ IO\_TYPES}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ IO\_TYPES}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ \ \ \_\_R\ \ \ \ \ volatile\ const\ uint32\_t}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ \ \ \_\_W\ \ \ \ \ volatile\ \ \ \ \ \ \ uint32\_t}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ \ \ \_\_RW\ \ \ \ volatile\ \ \ \ \ \ \ uint32\_t}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_RD\_CMD\_REG\_RD\_CMD\_BIT\ ((uint32\_t)0)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_RD\_CMD\_REG\_RD\_CMD\_MASK\ \ \ \ ((uint32\_t)0xff)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_RD\_CMD\_REG\_MAX\_VALUE\ \ ((uint32\_t)0xFF)}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_WR\_CMD\_REG\_WR\_CMD\_BIT\ ((uint32\_t)0)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_WR\_CMD\_REG\_WR\_CMD\_MASK\ \ \ \ ((uint32\_t)0xff)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_WR\_CMD\_REG\_MAX\_VALUE\ \ ((uint32\_t)0xFF)}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_EQPI\_CMD\_REG\_EQPI\_CMD\_BIT\ ((uint32\_t)0)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_EQPI\_CMD\_REG\_EQPI\_CMD\_MASK\ \ \ \ ((uint32\_t)0xff)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_EQPI\_CMD\_REG\_MAX\_VALUE\ \ \ \ ((uint32\_t)0xFF)}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_XQPI\_CMD\_REG\_XQPI\_CMD\_BIT\ ((uint32\_t)0)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_XQPI\_CMD\_REG\_XQPI\_CMD\_MASK\ \ \ \ ((uint32\_t)0xff)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_XQPI\_CMD\_REG\_MAX\_VALUE\ \ \ \ ((uint32\_t)0xFF)}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_WAIT\_STATES\_REG\_WAIT\_STATES\_BIT\ \ \ ((uint32\_t)0)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_WAIT\_STATES\_REG\_WAIT\_STATES\_MASK\ \ ((uint32\_t)0xf)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_WAIT\_STATES\_REG\_MAX\_VALUE\ ((uint32\_t)0xF)}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_MODE\_REG\_MODE\_BIT\ ((uint32\_t)0)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_MODE\_REG\_MODE\_MASK\ \ \ \ ((uint32\_t)0x3)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_MODE\_REG\_MAX\_VALUE\ \ \ \ ((uint32\_t)0x3)}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_ENTER\_QPI\_REG\_ENTER\_QPI\_BIT\ \ \ ((uint32\_t)0)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_ENTER\_QPI\_REG\_ENTER\_QPI\_MASK\ \ ((uint32\_t)0x1)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_ENTER\_QPI\_REG\_MAX\_VALUE\ \ \ ((uint32\_t)0x1)}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_EXIT\_QPI\_REG\_EXIT\_QPI\_BIT\ ((uint32\_t)0)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_EXIT\_QPI\_REG\_EXIT\_QPI\_MASK\ \ \ \ ((uint32\_t)0x1)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_EXIT\_QPI\_REG\_MAX\_VALUE\ \ \ \ ((uint32\_t)0x1)}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_EXTERNAL\_MEMORY\_MAX\_VALUE\ ((uint32\_t)2097151-\/1)}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00077\ \textcolor{comment}{*\ Typedefs\ and\ Enums}}
+\DoxyCodeLine{00078\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{\_EF\_PSRAM\_CTRL\_TYPE\_}}\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_a81f369079976a46554fd9798ab035697}{\_\_RW}}\ \ \ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a2b263a11e5e2d2970e4a6a6f40465bc7}{external\_memory}}[2097151];}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a861071c490b4f6c968375ec520daf14c}{reserved\_0}}[25];}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a1341d961b552d2ec7e8a462ba09850fd}{rd\_cmd}};}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a3e02ee47e51bdb2f81fb4a97da0efa78}{reserved\_1}}[63];}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a57d49f66b23245c6a7ebae3125acc744}{wr\_cmd}};}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a56d9eb1e358823110522d835bfefbc1e}{reserved\_2}}[127];}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a207bd9217a816e3823c3834366905f0e}{eqpi\_cmd}};}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a570b26af126ddb53c937892a70c2f663}{reserved\_3}}[255];}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a849dc344b5ace429789fb85eca2b29d7}{xqpi\_cmd}};}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___ab0c4b19751df4f7030b1ef4b89ed8244}{reserved\_4}}[511];}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a5f70904955b9b32d3a96f660c74e9a4d}{wait\_states}};}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___aa13ffe9cf43356c0e1e7cc6be8d4ca89}{reserved\_5}}[1023];}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a48b4a6a46ce68a1a473d688376d9cf4d}{mode}};}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___ac13c1c8c91df20cae0b1a994129baabe}{reserved\_6}}[2047];}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a58a1d5ad8153d8432be1563b5298467a}{enter\_qpi}};}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___abb2b9d80ef677845df3219362207f03c}{reserved\_7}}[4095];}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___a82d20d77cd53ba7f918613f0ed4146af}{exit\_qpi}};}
+\DoxyCodeLine{00098\ \}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_a158639b5d494665e69d73db9762e8529}{EF\_PSRAM\_CTRL\_TYPE}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{\_EF\_PSRAM\_CTRL\_TYPE\_}}\ *\mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h_a5115d223e3cb8f74598779813d4c4021}{EF\_PSRAM\_CTRL\_TYPE\_PTR}};\ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ register\ structure}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ }
+\DoxyCodeLine{00103\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00104\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00105\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00110\ \textcolor{comment}{*\ External\ Variables}}
+\DoxyCodeLine{00111\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00119\ \textcolor{comment}{*\ End\ of\ File}}
+\DoxyCodeLine{00120\ \textcolor{comment}{******************************************************************************/}}
+
+\end{DoxyCode}

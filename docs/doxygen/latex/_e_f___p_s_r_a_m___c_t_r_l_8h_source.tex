@@ -1,0 +1,131 @@
+\hypertarget{_e_f___p_s_r_a_m___c_t_r_l_8h_source}{}\doxysection{EF\+\_\+\+PSRAM\+\_\+\+CTRL.\+h}
+\mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ Copyright\ 2025\ Efabless\ Corp.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ \ \ \ \ www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifndef\ EF\_PSRAM\_CTRL\_H}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ EF\_PSRAM\_CTRL\_H}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ Includes}}
+\DoxyCodeLine{00029\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l__regs_8h}{EF\_PSRAM\_CTRL\_regs.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_e_f___driver___common_8h}{EF\_Driver\_Common.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ Macros\ and\ Constants}}
+\DoxyCodeLine{00036\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_BASE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_RD\_CMD\_REG\_ADDR\ \ \ \ \ \ \ \ (EF\_PSRAM\_CTRL\_BASE\ +\ 0x00800100)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_WR\_CMD\_REG\_ADDR\ \ \ \ \ \ \ \ (EF\_PSRAM\_CTRL\_BASE\ +\ 0x00800200)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_EQPI\_CMD\_REG\_ADDR\ \ \ \ \ \ (EF\_PSRAM\_CTRL\_BASE\ +\ 0x00800400)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_XQPI\_CMD\_REG\_ADDR\ \ \ \ \ \ (EF\_PSRAM\_CTRL\_BASE\ +\ 0x00800800)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_WAIT\_STATES\_REG\_ADDR\ \ \ (EF\_PSRAM\_CTRL\_BASE\ +\ 0x00801000)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_MODE\_REG\_ADDR\ \ \ \ \ \ \ \ \ \ (EF\_PSRAM\_CTRL\_BASE\ +\ 0x00802000)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_ENTER\_QPI\_REG\_ADDR\ \ \ \ \ (EF\_PSRAM\_CTRL\_BASE\ +\ 0x00804000)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ \ \ \ \ EF\_PSRAM\_CTRL\_EXIT\_QPI\_REG\_ADDR\ \ \ \ \ \ (EF\_PSRAM\_CTRL\_BASE\ +\ 0x00808000)}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{//volatile\ unsigned\ uint32\_t\ *\ ef\_psram\_ctrl\_rd\_cmd\ \ \ \ \ \ \ \ \ =\ (volatile\ unsigned\ uint32\_t\ *)\ EF\_PSRAM\_CTRL\_RD\_CMD\_REG\_ADDR\ \ \ \ \ ;}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//volatile\ unsigned\ uint32\_t\ *\ ef\_psram\_ctrl\_wr\_cmd\ \ \ \ \ \ \ \ \ =\ (volatile\ unsigned\ uint32\_t\ *)\ EF\_PSRAM\_CTRL\_WR\_CMD\_REG\_ADDR\ \ \ \ \ ;}}
+\DoxyCodeLine{00051\ \textcolor{comment}{//volatile\ unsigned\ uint32\_t\ *\ ef\_psram\_ctrl\_eqpi\_cmd\ \ \ \ \ \ \ =\ (volatile\ unsigned\ uint32\_t\ *)\ EF\_PSRAM\_CTRL\_EQPI\_CMD\_REG\_ADDR\ \ \ ;}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//volatile\ unsigned\ uint32\_t\ *\ ef\_psram\_ctrl\_xqpi\_cmd\ \ \ \ \ \ \ =\ (volatile\ unsigned\ uint32\_t\ *)\ EF\_PSRAM\_CTRL\_XQPI\_CMD\_REG\_ADDR\ \ \ ;}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//volatile\ unsigned\ uint32\_t\ *\ ef\_psram\_ctrl\_wait\_states\ \ \ \ =\ (volatile\ unsigned\ uint32\_t\ *)\ EF\_PSRAM\_CTRL\_WAIT\_STATES\_REG\_ADDR;}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//volatile\ unsigned\ uint32\_t\ *\ ef\_psram\_ctrl\_mode\ \ \ \ \ \ \ \ \ \ \ =\ (volatile\ unsigned\ uint32\_t\ *)\ EF\_PSRAM\_CTRL\_MODE\_REG\_ADDR\ \ \ \ \ \ \ ;}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//volatile\ unsigned\ uint32\_t\ *\ ef\_psram\_ctrl\_enter\_qpi\ \ \ \ \ \ =\ (volatile\ unsigned\ uint32\_t\ *)\ EF\_PSRAM\_CTRL\_ENTER\_QPI\_REG\_ADDR\ \ ;}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//volatile\ unsigned\ uint32\_t\ *\ ef\_psram\_ctrl\_exit\_qpi\ \ \ \ \ \ \ =\ (volatile\ unsigned\ uint32\_t\ *)\ EF\_PSRAM\_CTRL\_EXIT\_QPI\_REG\_ADDR\ \ \ ;}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00061\ \textcolor{comment}{*\ Typedefs\ and\ Enums}}
+\DoxyCodeLine{00062\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00067\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00068\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a9e5c88b0434806e822bd95f84d618d24}{PSRAM\_setReadCMD}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_adfd177be696b801a70e2712fe618e352}{PSRAM\_setWriteCMD}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{comment}{//uint32\_t\ PSRAM\_getWrireCMD();}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a67992ca7ff4d7af00d3d44bc2fac5fa2}{PSRAM\_setEnterQPIcmd}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{comment}{//uint32\_t\ PSRAM\_getEnterQPIcmd();}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a67992ca7ff4d7af00d3d44bc2fac5fa2}{PSRAM\_setEnterQPIcmd}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00115\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a3caf16ef150bcce0c77932d856e9ab1d}{PSRAM\_setExitQPIcmd}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a7950dc0e4e0d4a9f1f0508dd34d1e4fc}{PSRAM\_setWaitStates}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00134\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a6f812852b12afdd045d9bb406fba146a}{PSRAM\_setMode}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a4225b269b8463c02840bc37ae447722c}{PSRAM\_initiateEnterQPI}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a778f4493831ed717f01243ff5120ebc6}{PSRAM\_initiateExitQPI}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ value);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00166\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a8e42e6e50659ed71c2aa708490ddc740}{PSRAM\_writeWord}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ addr,\ uint32\_t\ word);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00177\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___p_s_r_a_m___c_t_r_l_8h_a96d1923351e3122eb102640605a3e81c}{PSRAM\_readWord}}(\mbox{\hyperlink{struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__}{EF\_PSRAM\_CTRL\_TYPE\_PTR}}\ psram,\ uint32\_t\ addr,\ uint32\_t\ *word);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00180\ \textcolor{comment}{*\ External\ Variables}}
+\DoxyCodeLine{00181\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//EF\_PSRAM\_CTRL\_H}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00188\ \textcolor{comment}{*\ End\ of\ File}}
+\DoxyCodeLine{00189\ \textcolor{comment}{******************************************************************************/}}
+
+\end{DoxyCode}

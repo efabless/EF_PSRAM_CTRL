@@ -69,7 +69,7 @@
 #define EF_PSRAM_CTRL_EXIT_QPI_REG_EXIT_QPI_MASK	((uint32_t)0x1)
 #define EF_PSRAM_CTRL_EXIT_QPI_REG_MAX_VALUE	((uint32_t)0x1)
 
-#define EF_PSRAM_CTRL_EXTERNAL_MEMORY_MAX_VALUE	((uint32_t)2097151-1)
+#define EF_PSRAM_CTRL_EXTERNAL_MEMORY_MAX_VALUE	((uint32_t) 2097150)
 
 
 
@@ -97,7 +97,7 @@ typedef struct _EF_PSRAM_CTRL_TYPE_ {
 	__W 	exit_qpi;
 } EF_PSRAM_CTRL_TYPE;
 
-typedef struct _EF_PSRAM_CTRL_TYPE_ *EF_PSRAM_CTRL_TYPE_PTR;     // Pointer to the register structure
+typedef struct EF_PSRAM_CTRL_TYPE *EF_PSRAM_CTRL_TYPE_PTR;     // Pointer to the register structure
 
   
 /******************************************************************************

@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h" kind="file" language="C++">
+    <compoundname>EF_PSRAM_CTRL_regs.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="_e_f___p_s_r_a_m___c_t_r_l_8h" local="yes">EF_PSRAM_CTRL.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>EF_PSRAM_CTRL_regs.h</label>
+        <link refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>EF_PSRAM_CTRL.c</label>
+        <link refid="_e_f___p_s_r_a_m___c_t_r_l_8c"/>
+      </node>
+      <node id="2">
+        <label>EF_PSRAM_CTRL.h</label>
+        <link refid="_e_f___p_s_r_a_m___c_t_r_l_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EF_PSRAM_CTRL_regs.h</label>
+        <link refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" prot="public">_EF_PSRAM_CTRL_TYPE_</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" prot="public" static="no">
+        <name>IO_TYPES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="34" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" prot="public" static="no">
+        <name>__R</name>
+        <initializer>volatile const uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="35" column="11" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" prot="public" static="no">
+        <name>__W</name>
+        <initializer>volatile       uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="36" column="11" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a81f369079976a46554fd9798ab035697" prot="public" static="no">
+        <name>__RW</name>
+        <initializer>volatile       uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="37" column="11" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1afb8b57fe0d7f1d0c1111d8597ac10bba" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_RD_CMD_REG_RD_CMD_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="40" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aea548cbf97649c22d393a460120d5a82" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_RD_CMD_REG_RD_CMD_MASK</name>
+        <initializer>((uint32_t)0xff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="41" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a0779e0553223a1383b73874e560543f8" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_RD_CMD_REG_MAX_VALUE</name>
+        <initializer>((uint32_t)0xFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="42" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1af26eff5746e5fb80ad09e18be7a5f310" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_WR_CMD_REG_WR_CMD_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="44" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aaf1f501dcbb542d8669860c75a6a43b3" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_WR_CMD_REG_WR_CMD_MASK</name>
+        <initializer>((uint32_t)0xff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="45" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ab5215d29a6fb86a79b0545c44e05d5f3" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_WR_CMD_REG_MAX_VALUE</name>
+        <initializer>((uint32_t)0xFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="46" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a1307f6458d67f16297dd32801ed675d1" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EQPI_CMD_REG_EQPI_CMD_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="48" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a8ae31a3fec997b0bd03b0fb7195e471d" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EQPI_CMD_REG_EQPI_CMD_MASK</name>
+        <initializer>((uint32_t)0xff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="49" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a1d25cb2d31fa85b888df50087aef2be3" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EQPI_CMD_REG_MAX_VALUE</name>
+        <initializer>((uint32_t)0xFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="50" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a88907774bf649a94d58fb6b788953c9f" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_XQPI_CMD_REG_XQPI_CMD_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="52" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad24437c0f5372ccbe90853fbd1a40649" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_XQPI_CMD_REG_XQPI_CMD_MASK</name>
+        <initializer>((uint32_t)0xff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="53" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ab74529691dedadd1128f8040ac00ace3" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_XQPI_CMD_REG_MAX_VALUE</name>
+        <initializer>((uint32_t)0xFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="54" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aa25a66012ce54d7d740208bdff953473" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_WAIT_STATES_REG_WAIT_STATES_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="56" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a340c6f92e065f69c1ad6576b8be040c0" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_WAIT_STATES_REG_WAIT_STATES_MASK</name>
+        <initializer>((uint32_t)0xf)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="57" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ae8771f51e80b335d3ed2c3b6d6e415ec" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_WAIT_STATES_REG_MAX_VALUE</name>
+        <initializer>((uint32_t)0xF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="58" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aa0c5d2f0487d30e24122114552834c37" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_MODE_REG_MODE_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="60" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aaf5f457ce5445868a272c3a6efcd52c5" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_MODE_REG_MODE_MASK</name>
+        <initializer>((uint32_t)0x3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="61" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a0084f5adb88a5439f351397f981be62d" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_MODE_REG_MAX_VALUE</name>
+        <initializer>((uint32_t)0x3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="62" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a673dcdaa651275ed0da69a1b47cc6bd9" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_ENTER_QPI_REG_ENTER_QPI_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="64" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a7c2bf5437d05066a4ca6f07550082f2f" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_ENTER_QPI_REG_ENTER_QPI_MASK</name>
+        <initializer>((uint32_t)0x1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="65" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a89fb11c1a7200f9bb89eb826d18f2e24" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_ENTER_QPI_REG_MAX_VALUE</name>
+        <initializer>((uint32_t)0x1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="66" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aa4ee85042970742be96860e103397d3b" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EXIT_QPI_REG_EXIT_QPI_BIT</name>
+        <initializer>((uint32_t)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="68" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ae6dbcb618be07deb893f7e95061e6ea3" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EXIT_QPI_REG_EXIT_QPI_MASK</name>
+        <initializer>((uint32_t)0x1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="69" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a95aecf5f5ab217efdf3efba33b90d438" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EXIT_QPI_REG_MAX_VALUE</name>
+        <initializer>((uint32_t)0x1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="70" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a2288e8a428cc4d2cd7c218ac2ebb4cc3" prot="public" static="no">
+        <name>EF_PSRAM_CTRL_EXTERNAL_MEMORY_MAX_VALUE</name>
+        <initializer>((uint32_t)2097151-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="72" column="9" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a158639b5d494665e69d73db9762e8529" prot="public" static="no">
+        <type>struct <ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">_EF_PSRAM_CTRL_TYPE_</ref></type>
+        <definition>typedef struct _EF_PSRAM_CTRL_TYPE_ EF_PSRAM_CTRL_TYPE</definition>
+        <argsstring></argsstring>
+        <name>EF_PSRAM_CTRL_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="98" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" prot="public" static="no">
+        <type>struct <ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">_EF_PSRAM_CTRL_TYPE_</ref> *</type>
+        <definition>typedef struct _EF_PSRAM_CTRL_TYPE_* EF_PSRAM_CTRL_TYPE_PTR</definition>
+        <argsstring></argsstring>
+        <name>EF_PSRAM_CTRL_TYPE_PTR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_PSRAM_CTRL_regs.h" line="100" column="35" bodyfile="EF_PSRAM_CTRL_regs.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>2024<sp/>Efabless<sp/>Corp.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>Author:<sp/>Efabless<sp/>Corp.<sp/>(ip_admin@efabless.com)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EF_PSRAM_CTRLREGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRLREGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>Includes</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>Macros<sp/>and<sp/>Constants</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IO_TYPES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_TYPES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__R<sp/><sp/><sp/><sp/><sp/>volatile<sp/>const<sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__W<sp/><sp/><sp/><sp/><sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a81f369079976a46554fd9798ab035697" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__RW<sp/><sp/><sp/><sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1afb8b57fe0d7f1d0c1111d8597ac10bba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_RD_CMD_REG_RD_CMD_BIT<sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aea548cbf97649c22d393a460120d5a82" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_RD_CMD_REG_RD_CMD_MASK<sp/><sp/><sp/><sp/>((uint32_t)0xff)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a0779e0553223a1383b73874e560543f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_RD_CMD_REG_MAX_VALUE<sp/><sp/>((uint32_t)0xFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1af26eff5746e5fb80ad09e18be7a5f310" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_WR_CMD_REG_WR_CMD_BIT<sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aaf1f501dcbb542d8669860c75a6a43b3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_WR_CMD_REG_WR_CMD_MASK<sp/><sp/><sp/><sp/>((uint32_t)0xff)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ab5215d29a6fb86a79b0545c44e05d5f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_WR_CMD_REG_MAX_VALUE<sp/><sp/>((uint32_t)0xFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a1307f6458d67f16297dd32801ed675d1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_EQPI_CMD_REG_EQPI_CMD_BIT<sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a8ae31a3fec997b0bd03b0fb7195e471d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_EQPI_CMD_REG_EQPI_CMD_MASK<sp/><sp/><sp/><sp/>((uint32_t)0xff)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a1d25cb2d31fa85b888df50087aef2be3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_EQPI_CMD_REG_MAX_VALUE<sp/><sp/><sp/><sp/>((uint32_t)0xFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a88907774bf649a94d58fb6b788953c9f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_XQPI_CMD_REG_XQPI_CMD_BIT<sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad24437c0f5372ccbe90853fbd1a40649" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_XQPI_CMD_REG_XQPI_CMD_MASK<sp/><sp/><sp/><sp/>((uint32_t)0xff)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ab74529691dedadd1128f8040ac00ace3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_XQPI_CMD_REG_MAX_VALUE<sp/><sp/><sp/><sp/>((uint32_t)0xFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aa25a66012ce54d7d740208bdff953473" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_WAIT_STATES_REG_WAIT_STATES_BIT<sp/><sp/><sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a340c6f92e065f69c1ad6576b8be040c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_WAIT_STATES_REG_WAIT_STATES_MASK<sp/><sp/>((uint32_t)0xf)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ae8771f51e80b335d3ed2c3b6d6e415ec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_WAIT_STATES_REG_MAX_VALUE<sp/>((uint32_t)0xF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aa0c5d2f0487d30e24122114552834c37" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_MODE_REG_MODE_BIT<sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aaf5f457ce5445868a272c3a6efcd52c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_MODE_REG_MODE_MASK<sp/><sp/><sp/><sp/>((uint32_t)0x3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a0084f5adb88a5439f351397f981be62d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_MODE_REG_MAX_VALUE<sp/><sp/><sp/><sp/>((uint32_t)0x3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a673dcdaa651275ed0da69a1b47cc6bd9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_ENTER_QPI_REG_ENTER_QPI_BIT<sp/><sp/><sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a7c2bf5437d05066a4ca6f07550082f2f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_ENTER_QPI_REG_ENTER_QPI_MASK<sp/><sp/>((uint32_t)0x1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a89fb11c1a7200f9bb89eb826d18f2e24" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_ENTER_QPI_REG_MAX_VALUE<sp/><sp/><sp/>((uint32_t)0x1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aa4ee85042970742be96860e103397d3b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_EXIT_QPI_REG_EXIT_QPI_BIT<sp/>((uint32_t)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ae6dbcb618be07deb893f7e95061e6ea3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_EXIT_QPI_REG_EXIT_QPI_MASK<sp/><sp/><sp/><sp/>((uint32_t)0x1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a95aecf5f5ab217efdf3efba33b90d438" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_EXIT_QPI_REG_MAX_VALUE<sp/><sp/><sp/><sp/>((uint32_t)0x1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a2288e8a428cc4d2cd7c218ac2ebb4cc3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_PSRAM_CTRL_EXTERNAL_MEMORY_MAX_VALUE<sp/>((uint32_t)2097151-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*<sp/>Typedefs<sp/>and<sp/>Enums</highlight></codeline>
+<codeline lineno="78"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">_EF_PSRAM_CTRL_TYPE_</ref><sp/>{</highlight></codeline>
+<codeline lineno="81" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a2b263a11e5e2d2970e4a6a6f40465bc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a2b263a11e5e2d2970e4a6a6f40465bc7" kindref="member">external_memory</ref>[2097151];</highlight></codeline>
+<codeline lineno="82" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a861071c490b4f6c968375ec520daf14c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a861071c490b4f6c968375ec520daf14c" kindref="member">reserved_0</ref>[25];</highlight></codeline>
+<codeline lineno="83" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a1341d961b552d2ec7e8a462ba09850fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a1341d961b552d2ec7e8a462ba09850fd" kindref="member">rd_cmd</ref>;</highlight></codeline>
+<codeline lineno="84" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a3e02ee47e51bdb2f81fb4a97da0efa78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a3e02ee47e51bdb2f81fb4a97da0efa78" kindref="member">reserved_1</ref>[63];</highlight></codeline>
+<codeline lineno="85" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a57d49f66b23245c6a7ebae3125acc744" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a57d49f66b23245c6a7ebae3125acc744" kindref="member">wr_cmd</ref>;</highlight></codeline>
+<codeline lineno="86" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a56d9eb1e358823110522d835bfefbc1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a56d9eb1e358823110522d835bfefbc1e" kindref="member">reserved_2</ref>[127];</highlight></codeline>
+<codeline lineno="87" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a207bd9217a816e3823c3834366905f0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a207bd9217a816e3823c3834366905f0e" kindref="member">eqpi_cmd</ref>;</highlight></codeline>
+<codeline lineno="88" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a570b26af126ddb53c937892a70c2f663" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a570b26af126ddb53c937892a70c2f663" kindref="member">reserved_3</ref>[255];</highlight></codeline>
+<codeline lineno="89" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a849dc344b5ace429789fb85eca2b29d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a849dc344b5ace429789fb85eca2b29d7" kindref="member">xqpi_cmd</ref>;</highlight></codeline>
+<codeline lineno="90" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1ab0c4b19751df4f7030b1ef4b89ed8244" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1ab0c4b19751df4f7030b1ef4b89ed8244" kindref="member">reserved_4</ref>[511];</highlight></codeline>
+<codeline lineno="91" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a5f70904955b9b32d3a96f660c74e9a4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a5f70904955b9b32d3a96f660c74e9a4d" kindref="member">wait_states</ref>;</highlight></codeline>
+<codeline lineno="92" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1aa13ffe9cf43356c0e1e7cc6be8d4ca89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1aa13ffe9cf43356c0e1e7cc6be8d4ca89" kindref="member">reserved_5</ref>[1023];</highlight></codeline>
+<codeline lineno="93" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a48b4a6a46ce68a1a473d688376d9cf4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a48b4a6a46ce68a1a473d688376d9cf4d" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="94" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1ac13c1c8c91df20cae0b1a994129baabe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1ac13c1c8c91df20cae0b1a994129baabe" kindref="member">reserved_6</ref>[2047];</highlight></codeline>
+<codeline lineno="95" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a58a1d5ad8153d8432be1563b5298467a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a58a1d5ad8153d8432be1563b5298467a" kindref="member">enter_qpi</ref>;</highlight></codeline>
+<codeline lineno="96" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1abb2b9d80ef677845df3219362207f03c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1abb2b9d80ef677845df3219362207f03c" kindref="member">reserved_7</ref>[4095];</highlight></codeline>
+<codeline lineno="97" refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a82d20d77cd53ba7f918613f0ed4146af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e___1a82d20d77cd53ba7f918613f0ed4146af" kindref="member">exit_qpi</ref>;</highlight></codeline>
+<codeline lineno="98" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a158639b5d494665e69d73db9762e8529" refkind="member"><highlight class="normal">}<sp/><ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a158639b5d494665e69d73db9762e8529" kindref="member">EF_PSRAM_CTRL_TYPE</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___e_f___p_s_r_a_m___c_t_r_l___t_y_p_e__" kindref="compound">_EF_PSRAM_CTRL_TYPE_</ref><sp/>*<ref refid="_e_f___p_s_r_a_m___c_t_r_l__regs_8h_1a5115d223e3cb8f74598779813d4c4021" kindref="member">EF_PSRAM_CTRL_TYPE_PTR</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>register<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">*<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="110"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
+<codeline lineno="111"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="119"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="120"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="EF_PSRAM_CTRL_regs.h"/>
+  </compounddef>
+</doxygen>
