@@ -1,10 +1,10 @@
 # EF_PSRAM_CTRL
 
-Pseudostatic RAM (PSRAM) is DRAM combined with a self-refresh circuit. 
-    It appears externally as slower SRAM, albeit with a density/cost advantage 
-    over true SRAM, and without the access complexity of DRAM.
-
-The controller was designed after:
+A Controller for Quad I/O SPI PSRAM
+  Pseudostatic RAM (PSRAM) is DRAM combined with a self-refresh circuit. 
+  It appears externally as slower SRAM, albeit with a density/cost advantage 
+  over true SRAM, and without the access complexity of DRAM.
+  The controller was designed after:
 - https://www.issi.com/WW/pdf/66-67WVS4M8ALL-BLL.pdf and
 - https://www.microchip.com/en-us/parametric-search/514
 
@@ -22,7 +22,7 @@ The controller was verified against the Verilog model of Microchip M23LC1024 for
 
  The IP comes with an AHBL Wrapper
 
-### Wrapped IP System Integration
+#### Wrapped IP System Integration
 
 ```verilog
 EF_PSRAM_CTRL_AHBL INST (
@@ -43,10 +43,18 @@ EF_PSRAM_CTRL_AHBL INST (
         .douten(douten)
 );
 ```
+### External IO interfaces
+|IO name|Direction|Width|Description|
+|---|---|---|---|
+|sck|output|1|SPI master output clock|
+|ce_n|output|1|SPI Master slave select.|
+|din|input|4|SPI Master data in , slave out|
+|dout|output|4|SPI Master data out , slave in|
+|douten|output|4|SPI Master data out enable|
 
 ## Implementation example  
 
-The following table is the result for implementing the EF_PSRAM_CTRL IP with different wrappers using Sky130 PDK and [OpenLane2](https://github.com/efabless/openlane2) flow.
+The following table is the result for implementing the EF_PSRAM_CTRL IP with different wrappers using Sky130 HD library and [OpenLane2](https://github.com/efabless/openlane2) flow.
 |Module | Number of cells | Max. freq |
 |---|---|---|
 |EF_PSRAM_CTRL|TBD| TBD |
@@ -76,64 +84,68 @@ The following table is the result for implementing the EF_PSRAM_CTRL IP with dif
 RD Command Register
 <img src="https://svg.wavedrom.com/{reg:[{name:'rd_cmd', bits:8},{bits: 24}], config: {lanes: 2, hflip: true}} "/>
 
-
 ### wr_cmd Register [Offset: 0x800200, mode: w]
 
 WR Command Register
 <img src="https://svg.wavedrom.com/{reg:[{name:'wr_cmd', bits:8},{bits: 24}], config: {lanes: 2, hflip: true}} "/>
-
 
 ### eqpi_cmd Register [Offset: 0x800400, mode: w]
 
 Enter QPI Command Register
 <img src="https://svg.wavedrom.com/{reg:[{name:'eqpi_cmd', bits:8},{bits: 24}], config: {lanes: 2, hflip: true}} "/>
 
-
 ### xqpi_cmd Register [Offset: 0x800800, mode: w]
 
 Exit QPI Command Register
 <img src="https://svg.wavedrom.com/{reg:[{name:'xqpi_cmd', bits:8},{bits: 24}], config: {lanes: 2, hflip: true}} "/>
-
 
 ### wait_states Register [Offset: 0x801000, mode: w]
 
 Wait States Register
 <img src="https://svg.wavedrom.com/{reg:[{name:'wait_states', bits:4},{bits: 28}], config: {lanes: 2, hflip: true}} "/>
 
-
 ### mode Register [Offset: 0x802000, mode: w]
 
 I/O Mode Register, {qpi, qspi}
 <img src="https://svg.wavedrom.com/{reg:[{name:'mode', bits:2},{bits: 30}], config: {lanes: 2, hflip: true}} "/>
-
 
 ### enter_qpi Register [Offset: 0x804000, mode: w]
 
 Initiate Enter QPI (EQPI) Mode process Register
 <img src="https://svg.wavedrom.com/{reg:[{name:'enter_qpi', bits:1},{bits: 31}], config: {lanes: 2, hflip: true}} "/>
 
-
 ### exit_qpi Register [Offset: 0x808000, mode: w]
 
 Initiate Exit QPI (XQPI) Mode process Register
 <img src="https://svg.wavedrom.com/{reg:[{name:'exit_qpi', bits:1},{bits: 31}], config: {lanes: 2, hflip: true}} "/>
 
-
-## The Interface 
-<img src="docs/_static/EF_PSRAM_CTRL_AHBL.svg" width="600"/>
-
 ## Firmware Drivers:
-Firmware drivers for EF_PSRAM_CTRL can be found in the [fw](https://github.com/efabless/EF_PSRAM_CTRL/tree/main/fw) directory. EF_PSRAM_CTRL driver documentation  is available [here](https://github.com/efabless/EF_PSRAM_CTRL/blob/main/fw/README.md).
-You can also find an example C application using the EF_PSRAM_CTRL drivers [here]().
-
+Firmware drivers for EF_PSRAM_CTRL can be found in the [Drivers](https://github.com/efabless/EFIS/tree/main/Drivers) directory in the [EFIS](https://github.com/efabless/EFIS) (Efabless Firmware Interface Standard) repo. EF_PSRAM_CTRL driver documentation  is available [here](https://github.com/efabless/EFIS/blob/main/Drivers/docs/EF_Driver_PSRAM_CTRL/README.md).
+You can also find an example C application using the EF_PSRAM_CTRL drivers [here](https://github.com/efabless/EFIS/tree/main/Drivers/docs/EF_Driver_PSRAM_CTRL/example).
 ## Installation:
 You can install the IP either by cloning this repository or by using [IPM](https://github.com/efabless/IPM).
-##### 1. Using [IPM](https://github.com/efabless/IPM):
+### 1. Using [IPM](https://github.com/efabless/IPM):
 - [Optional] If you do not have IPM installed, follow the installation guide [here](https://github.com/efabless/IPM/blob/main/README.md)
 - After installing IPM, execute the following command ```ipm install EF_PSRAM_CTRL```.
 > **Note:** This method is recommended as it automatically installs [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) as a dependency.
-##### 2. Cloning this repo: 
+### 2. Cloning this repo: 
 - Clone [EF_IP_UTIL](https://github.com/efabless/EF_IP_UTIL.git) repository, which includes the required modules from the common modules library, [ef_util_lib.v](https://github.com/efabless/EF_IP_UTIL/blob/main/hdl/ef_util_lib.v).
 ```git clone https://github.com/efabless/EF_IP_UTIL.git```
 - Clone the IP repository
 ```git clone github.com/efabless/EF_PSRAM_CTRL```
+
+### The Wrapped IP Interface 
+
+>**_NOTE:_** This section is intended for advanced users who wish to gain more information about the interface of the wrapped IP, in case they want to create their own wrappers.
+
+<img src="docs/_static/EF_PSRAM_CTRL.svg" width="600"/>
+
+#### Ports 
+
+|Port|Direction|Width|Description|
+|---|---|---|---|
+|sck|output|1|SPI master output clock|
+|ce_n|output|1|SPI Master slave select.|
+|din|input|4|SPI Master data in , slave out|
+|dout|output|4|SPI Master data out , slave in|
+|douten|output|4|SPI Master data out enable|
