@@ -24,7 +24,7 @@
 /******************************************************************************
 * Includes
 ******************************************************************************/
-#include "EF_Driver_Common.h"
+#include <stdint.h>
 
 /******************************************************************************
 * Macros and Constants
@@ -69,16 +69,17 @@
 #define EF_PSRAM_CTRL_EXIT_QPI_REG_EXIT_QPI_MASK	((uint32_t)0x1)
 #define EF_PSRAM_CTRL_EXIT_QPI_REG_MAX_VALUE	((uint32_t)0x1)
 
+#define EF_PSRAM_CTRL_EXTERNAL_MEMORY_MAX_VALUE	((uint32_t)2097151-1)
 
 
 
-          
 /******************************************************************************
 * Typedefs and Enums
 ******************************************************************************/
           
 typedef struct _EF_PSRAM_CTRL_TYPE_ {
-	__R 	reserved_0[2097216];
+    __RW 	external_memory[2097151];
+	__R 	reserved_0[25];
 	__W 	rd_cmd;
 	__R 	reserved_1[63];
 	__W 	wr_cmd;
@@ -94,12 +95,6 @@ typedef struct _EF_PSRAM_CTRL_TYPE_ {
 	__W 	enter_qpi;
 	__R 	reserved_7[4095];
 	__W 	exit_qpi;
-	__R 	reserved_8[-2089025];
-	__RW	IM;
-	__R 	MIS;
-	__R 	RIS;
-	__W 	IC;
-	__W 	GCLK;
 } EF_PSRAM_CTRL_TYPE;
 
 typedef struct _EF_PSRAM_CTRL_TYPE_ *EF_PSRAM_CTRL_TYPE_PTR;     // Pointer to the register structure
@@ -123,5 +118,3 @@ typedef struct _EF_PSRAM_CTRL_TYPE_ *EF_PSRAM_CTRL_TYPE_PTR;     // Pointer to t
 /******************************************************************************
 * End of File
 ******************************************************************************/
-          
-          
