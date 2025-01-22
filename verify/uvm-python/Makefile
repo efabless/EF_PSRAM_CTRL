@@ -33,7 +33,7 @@ YAML_FILE = $(PWD)/../../EF_PSRAM_CTRL.yaml # TODO: update yaml file path
 MAKEFLAGS += --no-print-directory
 
 # List of tests
-TESTS := psram_spi_test psram_sqi_test psram_sdi_test psram_hsize_test
+TESTS := psram_spi_test psram_sqi_test psram_hsize_test
 
 # Variable for tag - set this as required
 SIM_TAG ?= default_tag

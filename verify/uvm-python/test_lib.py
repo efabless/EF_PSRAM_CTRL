@@ -72,7 +72,7 @@ async def module_top(dut):
     UVMRoot().clp.get_arg_values("+TEST_PATH=", test_path)
     test_path = test_path[0]
     await run_test()
-    coverage_db.export_to_yaml(filename=f"{test_path}/coverage.yalm")
+    coverage_db.export_to_yaml(filename=f"{test_path}/coverage.yaml")
     # profiler.disable()
     # profiler.dump_stats("profile_result.prof")
 
@@ -190,6 +190,8 @@ class psram_sdi_test(psram_base_test):
     async def shutdown_phase(self, phase):
         await super().shutdown_phase(phase)
         self.check_mode(1)  # SDI
+
+uvm_component_utils(psram_sdi_test)
 
 class psram_hsize_test(psram_base_test):
     def __init__(self, name="psram__first_test", parent=None):
