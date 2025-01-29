@@ -52,7 +52,7 @@
 * Function Definitions
 ******************************************************************************/
 
-EF_DRIVER_STATUS PSRAM_setReadCMD(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_setReadCMD(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
     if (psram == NULL){
@@ -67,7 +67,7 @@ EF_DRIVER_STATUS PSRAM_setReadCMD(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
     return status;
 }
 
-EF_DRIVER_STATUS PSRAM_setWriteCMD(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_setWriteCMD(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
     if (psram == NULL){
@@ -83,7 +83,7 @@ EF_DRIVER_STATUS PSRAM_setWriteCMD(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value)
     return status;
 }
 
-EF_DRIVER_STATUS PSRAM_setEnterQPIcmd(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_setEnterQPIcmd(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -101,7 +101,7 @@ EF_DRIVER_STATUS PSRAM_setEnterQPIcmd(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t val
 
 }
 
-EF_DRIVER_STATUS PSRAM_setExitQPIcmd(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_setExitQPIcmd(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -117,7 +117,7 @@ EF_DRIVER_STATUS PSRAM_setExitQPIcmd(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t valu
     return status;
 }
 
-EF_DRIVER_STATUS PSRAM_setWaitStates(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_setWaitStates(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -135,7 +135,7 @@ EF_DRIVER_STATUS PSRAM_setWaitStates(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t valu
 
 }
 
-EF_DRIVER_STATUS PSRAM_setMode(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_setMode(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -152,7 +152,7 @@ EF_DRIVER_STATUS PSRAM_setMode(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
     return status;
 }
 
-EF_DRIVER_STATUS PSRAM_initiateEnterQPI(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_initiateEnterQPI(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
 
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -170,7 +170,7 @@ EF_DRIVER_STATUS PSRAM_initiateEnterQPI(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t v
     return status;
 }
 
-EF_DRIVER_STATUS PSRAM_initiateExitQPI(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_initiateExitQPI(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -186,7 +186,7 @@ EF_DRIVER_STATUS PSRAM_initiateExitQPI(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t va
     return status;
 }
 
-EF_DRIVER_STATUS PSRAM_writeWord(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t addr, uint32_t word){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_writeWord(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t addr, uint32_t word){
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
     if (psram == NULL){
@@ -201,7 +201,7 @@ EF_DRIVER_STATUS PSRAM_writeWord(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t addr, ui
     return status;
 }
 
-EF_DRIVER_STATUS PSRAM_readWord(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t addr, uint32_t *word){
+EF_DRIVER_STATUS EF_PSRAM_CTRL_readWord(EF_PSRAM_CTRL_TYPE_PTR psram, uint32_t addr, uint32_t *word){
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
     if (psram == NULL){
         status = EF_DRIVER_ERROR_PARAMETER;

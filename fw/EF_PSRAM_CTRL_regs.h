@@ -97,9 +97,8 @@ typedef struct _EF_PSRAM_CTRL_TYPE_ {
 	__W 	exit_qpi;
 } EF_PSRAM_CTRL_TYPE;
 
-typedef struct EF_PSRAM_CTRL_TYPE *EF_PSRAM_CTRL_TYPE_PTR;     // Pointer to the register structure
+typedef EF_PSRAM_CTRL_TYPE *EF_PSRAM_CTRL_TYPE_PTR;     // Pointer to the register structure
 
-  
 /******************************************************************************
 * Function Prototypes
 ******************************************************************************/
