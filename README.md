@@ -25,24 +25,18 @@ The controller was verified against the Verilog model of Microchip M23LC1024 for
 #### Wrapped IP System Integration
 
 ```verilog
-EF_PSRAM_CTRL_AHBL INST (
-        .HCLK(CLK), 
-        .HRESETn(RESETn), 
-        .HADDR(HADDR), 
-        .HWRITE(HWRITE), 
-        .HSEL(HSEL), 
-        .HTRANS(HTRANS), 
-        .HWDATA(HWDATA),
-        .HRDATA(HRDATA), 
-        .HREADY(HREADY),
-        .HREADYOUT(HREADYOUT),
-        .sck(sck),
-        .ce_n(ce_n),
-        .din(din),
-        .dout(dout),
-        .douten(douten)
+EF_PSRAM_CTRL_APB INST (
+	`TB_AHBL_SLAVE_CONN,
+	.sck(sck)
+	.ce_n(ce_n)
+	.din(din)
+	.dout(dout)
+	.douten(douten)
 );
 ```
+> **_NOTE:_** `TB_APB_SLAVE_CONN is a convenient macro provided by [BusWrap](https://github.com/efabless/BusWrap/tree/main).
+### Wrappers with DFT support
+Wrappers in the directory ``/hdl/rtl/bus_wrappers/DFT`` have an extra input port ``sc_testmode`` to disable the clock gate whenever the scan chain testmode is enabled.
 ### External IO interfaces
 |IO name|Direction|Width|Description|
 |---|---|---|---|
@@ -51,6 +45,8 @@ EF_PSRAM_CTRL_AHBL INST (
 |din|input|4|SPI Master data in , slave out|
 |dout|output|4|SPI Master data out , slave in|
 |douten|output|4|SPI Master data out enable|
+### Interrupt Request Line (irq)
+This IP generates interrupts on specific events, which are described in the [Interrupt Flags](#interrupt-flags) section bellow. The IRQ port should be connected to the system interrupt controller.
 
 ## Implementation example  
 
@@ -61,11 +57,7 @@ The following table is the result for implementing the EF_PSRAM_CTRL IP with dif
 |EF_PSRAM_CTRL_AHBL|TBD|TBD|
 ## The Programmer's Interface
 
-### Memory Map
-|Region|Description|
-|------|-----------|
-|```0x07FF_FFFF - 0x0000_0000```| Data Access |
-|```0x0FFF_FFFF - 0x0800_0000```| Configuration Registers|
+
 ### Registers
 
 |Name|Offset|Reset Value|Access Mode|Description|
@@ -120,8 +112,8 @@ Initiate Exit QPI (XQPI) Mode process Register
 <img src="https://svg.wavedrom.com/{reg:[{name:'exit_qpi', bits:1},{bits: 31}], config: {lanes: 2, hflip: true}} "/>
 
 ## Firmware Drivers:
-Firmware drivers for EF_PSRAM_CTRL can be found in the [Drivers](https://github.com/efabless/EFIS/tree/main/Drivers) directory in the [EFIS](https://github.com/efabless/EFIS) (Efabless Firmware Interface Standard) repo. EF_PSRAM_CTRL driver documentation  is available [here](https://github.com/efabless/EFIS/blob/main/Drivers/docs/EF_Driver_PSRAM_CTRL/README.md).
-You can also find an example C application using the EF_PSRAM_CTRL drivers [here](https://github.com/efabless/EFIS/tree/main/Drivers/docs/EF_Driver_PSRAM_CTRL/example).
+Firmware drivers for EF_PSRAM_CTRL can be found in the [Drivers](https://github.com/efabless/EFIS/tree/main/Drivers) directory in the [EFIS](https://github.com/efabless/EFIS) (Efabless Firmware Interface Standard) repo. EF_PSRAM_CTRL driver documentation  is available [here](https://github.com/efabless/EFIS/blob/main/Drivers/Docs/EF_PSRAM_CTRL/README.md).
+You can also find an example C application using the EF_PSRAM_CTRL drivers [here](https://github.com/efabless/EFIS/tree/main/Drivers/Docs/EF_PSRAM_CTRL/example).
 ## Installation:
 You can install the IP either by cloning this repository or by using [IPM](https://github.com/efabless/IPM).
 ### 1. Using [IPM](https://github.com/efabless/IPM):
