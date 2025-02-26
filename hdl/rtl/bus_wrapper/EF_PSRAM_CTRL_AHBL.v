@@ -181,7 +181,7 @@ module EF_PSRAM_CTRL_AHBL #(parameter REGISTER_HWDATA = 1)
     always@(posedge HCLK or negedge HRESETn) begin 
         if(!HRESETn) 
             last_HSIZE <= 0;
-        else if (HTRANS[1])
+        else if (HTRANS[1] & HREADYOUT)
                 last_HSIZE<=HSIZE;
     end
 
@@ -254,7 +254,7 @@ module EF_PSRAM_CTRL_AHBL #(parameter REGISTER_HWDATA = 1)
         else
             case (state)
                 ST_IDLE :   
-                    if((last_ahb_addr_phase|ahb_addr_phase) & data_cfg) 
+                    if((last_ahb_addr_phase|ahb_addr_phase)) 
                         HREADYOUT <= 1'b0;
                     else 
                         HREADYOUT <= 1'b1;
